@@ -10,4 +10,15 @@
 #                                                                              #
 # **************************************************************************** #
 
+CC = c++
 
+CFLAGS = -Wall -Wextra -Werror -std=c++98
+
+FILE = megaphone.cpp
+
+NAME = megaphone
+
+all:${NAME}
+
+${NAME}: ${FILE}
+	${CC} ${CFLAGS} $^ -o ${NAME}
