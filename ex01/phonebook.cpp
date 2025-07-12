@@ -49,11 +49,11 @@ public:
 
 class PhoneBook
 {
-private:
+public:
 	MyContact list[8];
 };
 
-void addContact()
+void addContact(PhoneBook Rep)
 {
 	MyContact NewContact;
 
@@ -61,6 +61,22 @@ void addContact()
 	// NewContact.LastName << NewContact.Nickname << NewContact.PhoneNumber<< NewContact.DarkestSecret;
 	cout << "Contact added.\n";
 	// NewContact.print_contact();
+	static int i = 0;
+
+	Rep.list[i] = NewContact;
+	i++;
+	if (i == 8)
+		i = 0;
+}
+
+void search(PhoneBook Rep)
+{
+	int i = 0;
+	while(i < 8)
+	{
+		Rep.list[i].print_contact();
+		i++;
+	}
 }
 
 int ft_strncmp(string input, string cmd, int size)
@@ -92,6 +108,11 @@ int main()
 		if (ft_strncmp(cmdInput, "ADD", 4) == 0)
 		{
 			addContact(Rep);
+			// addContact();
+		}
+		if (ft_strncmp(cmdInput, "SEARCH", 7) == 0)
+		{
+			search(Rep);
 			// addContact();
 		}
 		else if (ft_strncmp(cmdInput, "EXIT", 5) == 0)
