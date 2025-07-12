@@ -24,13 +24,14 @@ private:
 	string DarkestSecret;
 
 public:
-	void print_contact()
+	void print_contact(int i)
 	{
-		cout << "First Name : " << FirstName << endl;
-		cout << "Last Name : " << LastName << endl;
-		cout << "Nickame : " << Nickname << endl;
-		cout << "Phone Number : " << PhoneNumber << endl;
-		cout << "Darkest Secret : " << DarkestSecret << endl;
+		// cout << "First Name : " << FirstName << endl;
+		// cout << "Last Name : " << LastName << endl;
+		// cout << "Nickame : " << Nickname << endl;
+		// cout << "Phone Number : " << PhoneNumber << endl;
+		// cout << "Darkest Secret : " << DarkestSecret << endl;
+		cout << i << "|" << FirstName << "|" << LastName << "|" << Nickname << endl;
 	}
 	void GetInfo()
 	{
@@ -51,9 +52,10 @@ class PhoneBook
 {
 public:
 	MyContact list[8];
+	int NbrContact;
 };
 
-void addContact(PhoneBook Rep)
+void addContact(PhoneBook *Rep)
 {
 	MyContact NewContact;
 
@@ -63,18 +65,19 @@ void addContact(PhoneBook Rep)
 	// NewContact.print_contact();
 	static int i = 0;
 
-	Rep.list[i] = NewContact;
+	Rep->list[i] = NewContact;
+	Rep->NbrContact++;
 	i++;
 	if (i == 8)
 		i = 0;
 }
 
-void search(PhoneBook Rep)
+void search(PhoneBook *Rep)
 {
 	int i = 0;
-	while(i < 8)
+	while(i < Rep->NbrContact)
 	{
-		Rep.list[i].print_contact();
+		Rep->list[i].print_contact(i);
 		i++;
 	}
 }
@@ -96,6 +99,7 @@ int main()
 {
 	string cmdInput;
 	PhoneBook Rep;
+	Rep.NbrContact = 0;
 	// cout << x << '\n';
 
 	// int cmp = ft_strncmp(x, "ADD", 3);
@@ -107,12 +111,12 @@ int main()
 		cin >> cmdInput;
 		if (ft_strncmp(cmdInput, "ADD", 4) == 0)
 		{
-			addContact(Rep);
+			addContact(&Rep);
 			// addContact();
 		}
 		if (ft_strncmp(cmdInput, "SEARCH", 7) == 0)
 		{
-			search(Rep);
+			search(&Rep);
 			// addContact();
 		}
 		else if (ft_strncmp(cmdInput, "EXIT", 5) == 0)
