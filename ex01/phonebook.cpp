@@ -11,41 +11,56 @@
 /* ************************************************************************** */
 
 #include <iostream>
+#include <string>
 using namespace std;
 
 class MyContact
 {
-public:
+private:
 	string FirstName;
 	string LastName;
 	string Nickname;
 	string PhoneNumber;
 	string DarkestSecret;
+
+public:
+	void print_contact()
+	{
+		cout << "First Name : " << FirstName << endl;
+		cout << "Last Name : " << LastName << endl;
+		cout << "Nickame : " << Nickname << endl;
+		cout << "Phone Number : " << PhoneNumber << endl;
+		cout << "Darkest Secret : " << DarkestSecret << endl;
+	}
+	void GetInfo()
+	{
+		cout << "First Name : ";
+		cin >> FirstName;
+		cout << "Last Name : ";
+		cin >> LastName;
+		cout << "Nickname : ";
+		cin >> Nickname;
+		cout << "Phone Number : ";
+		cin >> PhoneNumber;
+		cout << "Darkest Secret : ";
+		cin >> DarkestSecret;
+	}
 };
 
 class PhoneBook
 {
-public:
-
+private:
+	MyContact list[8];
 };
 
 void addContact()
 {
 	MyContact NewContact;
 
-	cout << "First Name : ";
-	cin >> NewContact.FirstName;
-	cout << "Last Name : ";
-	cin >> NewContact.LastName;
-	cout << "Nickname : ";
-	cin >> NewContact.Nickname;
-	cout << "Phone Number : ";
-	cin >> NewContact.PhoneNumber;
-	cout << "Darkest Secret : ";
-	cin >> NewContact.DarkestSecret;
-	// cout << "test"<<NewContact.FirstName <<
+	NewContact.GetInfo();
 	// NewContact.LastName << NewContact.Nickname << NewContact.PhoneNumber<< NewContact.DarkestSecret;
 	cout << "Contact added.\n";
+	// NewContact.print_contact();
 }
 
 int ft_strncmp(string input, string cmd, int size)
@@ -64,7 +79,7 @@ int ft_strncmp(string input, string cmd, int size)
 int main()
 {
 	string cmdInput;
-
+	PhoneBook Rep;
 	// cout << x << '\n';
 
 	// int cmp = ft_strncmp(x, "ADD", 3);
@@ -76,7 +91,7 @@ int main()
 		cin >> cmdInput;
 		if (ft_strncmp(cmdInput, "ADD", 4) == 0)
 		{
-			addContact();
+			addContact(Rep);
 			// addContact();
 		}
 		else if (ft_strncmp(cmdInput, "EXIT", 5) == 0)
