@@ -119,7 +119,7 @@ public:
 	}
 	void Index(int i)
 	{
-		if (i > NbrContact)
+		if (i >= NbrContact)
 			cout << "Contact Empty." << endl;
 		else
 			list[i].info();
