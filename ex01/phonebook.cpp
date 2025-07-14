@@ -14,6 +14,46 @@
 #include <string>
 using namespace std;
 
+int ft_strlen(string str)
+{
+	int i = 0;
+	while (str[i])
+		i++;
+	return (i);
+}
+
+string ft_print(string str)
+{
+	string NewStr;
+	// int i = 0;
+	int len = ft_strlen(str);
+	if (len > 10)
+	{
+	// 	while (i < 10)
+	// 	{
+	// 		// cout << "newstr:"<< NewStr[i] << " str:"<<str[i] << endl;
+	// 		NewStr[i] = str[i];
+	// 		// cout << "newstr:"<< NewStr[i] << " str:"<<str[i] << endl;
+	// 		i++;
+	// 	}
+	// 	NewStr[i] = '.';
+	// NewStr[i+1]='\0';
+	// 	cout << NewStr;
+		// NewStr[i+1]='\0';
+		NewStr = str.substr(0,9) + ".";
+	}
+	else
+	{
+		NewStr = str;
+		while (ft_strlen(NewStr) < 10)
+		{
+			NewStr = ' ' + NewStr;
+		}	
+		// return (str);
+	}
+	return (NewStr);
+}
+
 class MyContact
 {
 private:
@@ -31,7 +71,10 @@ public:
 		// cout << "Nickame : " << Nickname << endl;
 		// cout << "Phone Number : " << PhoneNumber << endl;
 		// cout << "Darkest Secret : " << DarkestSecret << endl;
-		cout << i << "|" << FirstName << "|" << LastName << "|" << Nickname << endl;
+
+		// cout << i << "|" << FirstName << "|" << LastName << "|" << Nickname << endl;
+
+		cout << "         " << i << "|" <<ft_print(FirstName) << "|" << ft_print(LastName) << "|" << ft_print(Nickname) << endl;
 	}
 	void GetInfo()
 	{
@@ -46,15 +89,61 @@ public:
 		cout << "Darkest Secret : ";
 		cin >> DarkestSecret;
 	}
+	void info()
+	{
+		cout << "Phone Number :" << PhoneNumber << endl;
+		cout << "Darkest Secret : " << DarkestSecret << endl;
+	}
 };
 
 class PhoneBook
 {
-public:
+private:
 	MyContact list[8];
 	int NbrContact;
-};
 
+public:
+	void Set()
+	{
+		NbrContact = 0;
+	}
+
+	void Search()
+	{
+		int i = 0;
+		while(i < NbrContact)
+		{
+			list[i].print_contact(i);
+			i++;
+		}
+	}
+	void Index(int i)
+	{
+		if (i > NbrContact)
+			cout << "Contact Empty." << endl;
+		else
+			list[i].info();
+	}
+
+	void addContact()
+	{
+		MyContact NewContact;
+
+		NewContact.GetInfo();
+		// NewContact.LastName << NewContact.Nickname << NewContact.PhoneNumber<< NewContact.DarkestSecret;
+		cout << "Contact added.\n";
+		// NewContact.print_contact();
+		static int i = 0;
+
+		list[i] = NewContact;
+		if (NbrContact < 8)
+			NbrContact++;
+		i++;
+		if (i == 8)
+			i = 0;
+	}
+};
+/*
 void addContact(PhoneBook *Rep)
 {
 	MyContact NewContact;
@@ -66,22 +155,20 @@ void addContact(PhoneBook *Rep)
 	static int i = 0;
 
 	Rep->list[i] = NewContact;
-	Rep->NbrContact++;
+	if (Rep->NbrContact < 8)
+		Rep->NbrContact++;
 	i++;
 	if (i == 8)
 		i = 0;
 }
+*/
 
+/*
 void search(PhoneBook *Rep)
 {
-	int i = 0;
-	while(i < Rep->NbrContact)
-	{
-		Rep->list[i].print_contact(i);
-		i++;
-	}
+	
 }
-
+*/
 int ft_strncmp(string input, string cmd, int size)
 {
 	int i = 0;
@@ -99,24 +186,40 @@ int main()
 {
 	string cmdInput;
 	PhoneBook Rep;
-	Rep.NbrContact = 0;
-	// cout << x << '\n';
 
-	// int cmp = ft_strncmp(x, "ADD", 3);
+	Rep.Set();
+	// int loop = 1;
 
-	// cout << cmp;
-	int loop = 1;
-	while(loop == 1)
+	// string s1 = "678901";
+	// int size = ft_strlen(s1);
+	// cout << size;
+	// string s2 = ft_print(s1);
+	// cout << s2;
+	int index;
+
+	while(1)
 	{
 		cin >> cmdInput;
 		if (ft_strncmp(cmdInput, "ADD", 4) == 0)
 		{
-			addContact(&Rep);
+			// addContact(&Rep);
+			Rep.addContact();
 			// addContact();
 		}
 		if (ft_strncmp(cmdInput, "SEARCH", 7) == 0)
 		{
-			search(&Rep);
+			// search(&Rep);
+			Rep.Search();
+			cout << "Index : ";
+			cin >> index;
+			if (index < 0 || index > 8)
+			{
+				cout << "Index invalid";
+			}
+			else
+			{
+				Rep.Index(index);
+			}
 			// addContact();
 		}
 		else if (ft_strncmp(cmdInput, "EXIT", 5) == 0)

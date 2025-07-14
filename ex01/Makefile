@@ -23,3 +23,10 @@ all:${NAME}
 ${NAME}: ${FILE}
 	${CC} ${CFLAGS} $^ -o ${NAME}
 
+clean: 
+	rm -f phonebook
+
+fclean:clean
+
+re:fclean
+	make
