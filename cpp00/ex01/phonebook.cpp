@@ -236,16 +236,21 @@ int main()
 			else
 			{
 				std::cout << "Index : ";
-				getline(std::cin, index);
-				if (std::cin.eof() == 1)
+				while (getline(std::cin, index))
 				{
-					std::cout << "EOF. Quit." << std::endl;
-					break ;
+					if (std::cin.eof() == 1)
+					{
+						std::cout << "EOF. Quit." << std::endl;
+						return (0);
+					}
+					if (index.size() == 1 && index[0] >= '0' && index[0] <= '7')
+					{
+							Rep.Index(index[0] - '0');
+							break ;
+					}
+					else
+						std::cout << "Please pick an index between 0 and 7" << std::endl;
 				}
-				if (index.size() == 1 && index[0] >= '0' && index[0] <= '7')
-						Rep.Index(index[0] - '0');
-				else
-					std::cout << "Please pick an index between 0 and 7" << std::endl;
 			}
 		}
 		else if (ft_strncmp(cmdInput, "EXIT", 5) == 0)
@@ -253,4 +258,5 @@ int main()
 			break ;
 		}
 	}
+	return (0);
 }
