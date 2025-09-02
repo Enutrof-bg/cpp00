@@ -24,11 +24,14 @@ void	Account::_displayTimestamp( void )
 			<< "] ";
 }
 
-Account::Account( int initial_deposit ): _accountIndex(_nbAccounts), _amount(initial_deposit), _nbDeposits(0), _nbWithdrawals(0)
+Account::Account( int initial_deposit )
 {
+	_accountIndex = _nbAccounts;
 	_nbAccounts++;
+	 _amount = initial_deposit;
+	_nbDeposits = 0;
+	_nbWithdrawals = 0;
 	_totalAmount += initial_deposit;
-	// std::cout << _totalAmount;
 	_displayTimestamp();
 	std::cout << "index:" << _accountIndex
 			<< ";amount:" << _amount
