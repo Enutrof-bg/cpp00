@@ -17,6 +17,7 @@
 # include <iostream>
 # include <string>
 # include <limits>
+# include <stdio.h>
 
 int ft_strlen(std::string str);
 int ft_strncmp(std::string input, std::string cmd, int size);
