@@ -63,16 +63,13 @@ int main()
 		getline(std::cin, cmdInput);
 		if (std::cin.eof() == 1)
 		{
-			std::cout << "EOF. Quit.TEST" << std::endl;
+			std::cout << "EOF. Quit." << std::endl;
 			return (0);
 		}
 		else if (ft_strncmp(cmdInput, "ADD", 4) == 0)
 		{
 			if (Rep.AddContact() == 1)
 			{
-				std::cin.clear();
-				std::cin.ignore(10000, '\n');
-				// continue ;
 				break ;
 			}
 		}
