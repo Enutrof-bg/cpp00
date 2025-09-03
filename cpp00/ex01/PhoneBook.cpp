@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "phonebook.h"
+#include "main.h"
 
 void PhoneBook::SetNbrContact()
 {

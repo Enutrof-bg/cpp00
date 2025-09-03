@@ -18,15 +18,21 @@ FILE = Account.cpp tests.cpp
 
 NAME = account
 
+SRC = ${FILE:.cpp=.o}
+
 all:${NAME}
 
-${NAME}: ${FILE}
+${NAME}: ${SRC}
 	${CC} ${CFLAGS} $^ -o ${NAME}
 
+%.o:%.cpp
+	${CC} ${CFLAGS} -c $^
+	
 clean: 
-	rm -f account
+	rm -f Account.o tests.o
 
 fclean:clean
+	rm -f account
 
 re:fclean
 	make

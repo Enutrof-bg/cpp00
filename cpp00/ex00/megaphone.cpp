@@ -11,18 +11,16 @@
 /* ************************************************************************** */
 
 #include <iostream>
-using namespace std;
 
 int main(int argc, char **argv)
 {
 	int i;
 	int j;
 	int n;
-	int len;
 	
 	if (argc < 2)
 	{
-		cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << "\n";
+		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
 	}
 	if (argc >= 2)
 	{
@@ -42,10 +40,10 @@ int main(int argc, char **argv)
 		n = 1;
 		while (n < argc)
 		{
-			cout << argv[n];
+			std::cout << argv[n];
 			n++;
 		}
-		cout << "\n";
+		std::cout << std::endl;
 	}
-		return 0;
+	return 0;
 }

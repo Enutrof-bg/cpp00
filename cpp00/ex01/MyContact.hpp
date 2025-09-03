@@ -10,7 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "phonebook.h"
+#ifndef MYCONTACT_HPP
+# define MYCONTACT_HPP
+
+# include "main.h"
 
 class MyContact
 {
@@ -28,3 +31,5 @@ public:
 	void ShowInfo();
 	void ShowInfoAll();
 };
+
+#endif

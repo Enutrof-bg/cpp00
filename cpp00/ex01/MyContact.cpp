@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "phonebook.h"
+#include "main.h"
 
 std::string MyContact::ft_print(std::string str)
 {

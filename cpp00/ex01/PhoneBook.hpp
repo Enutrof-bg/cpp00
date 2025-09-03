@@ -10,7 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "phonebook.h"
+
+#ifndef PHONEBOOK_H
+# define PHONEBOOK_H
+
+# include "main.h"
 
 class PhoneBook
 {
@@ -25,3 +29,5 @@ public:
 	void Index(int i);
 	int AddContact();
 };
+
+#endif

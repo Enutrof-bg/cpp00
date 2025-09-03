@@ -18,15 +18,21 @@ FILE = main.cpp MyContact.cpp PhoneBook.cpp
 
 NAME = phonebook
 
+SRC = ${FILE:.cpp=.o}
+
 all:${NAME}
 
-${NAME}: ${FILE}
+${NAME}: ${SRC}
 	${CC} ${CFLAGS} $^ -o ${NAME}
 
+%.o:%.cpp
+	${CC} ${CFLAGS} -c $^
+	
 clean: 
-	rm -f phonebook
+	rm -f main.o MyContact.o PhoneBook.o
 
 fclean:clean
+	rm -f phonebook
 
 re:fclean
 	make

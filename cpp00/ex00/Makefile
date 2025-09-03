@@ -18,13 +18,18 @@ FILE = megaphone.cpp
 
 NAME = megaphone
 
+SRC = ${FILE:.cpp=.o}
+
 all:${NAME}
 
-${NAME}: ${FILE}
+${NAME}: ${SRC}
 	${CC} ${CFLAGS} $^ -o ${NAME}
 
+%.o:%.cpp
+	${CC} ${CFLAGS} -c $^
+
 clean:
-	rm -f megaphone
+	rm -f megaphone.o
 
 fclean:clean
 	rm -f megaphone
