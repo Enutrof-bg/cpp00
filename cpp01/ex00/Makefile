@@ -14,9 +14,9 @@ CC = c++
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-FILE = phonebook.cpp
-
-NAME = phonebook
+FILE = main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
+# newZombie.cpp randomChump.cpp
+NAME = zombie
 
 all:${NAME}
 
@@ -24,9 +24,10 @@ ${NAME}: ${FILE}
 	${CC} ${CFLAGS} $^ -o ${NAME}
 
 clean: 
-	rm -f phonebook
+	rm -f main.o newZombie.o Zombie.o randomChump.o
 
 fclean:clean
+	rm -f zombie
 
 re:fclean
 	make
