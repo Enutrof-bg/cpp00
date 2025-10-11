@@ -19,9 +19,9 @@ int main(int argc, char **argv)
 	Harl harl;
 	harl.complain(argv[1]);
 
-	harl.complain("DEBUG");
-	harl.complain("WARNING");
-	harl.complain("INFO");
-	harl.complain("ERROR");
+	// harl.complain("DEBUG");
+	// harl.complain("WARNING");
+	// harl.complain("INFO");
+	// harl.complain("ERROR");
 
 }
