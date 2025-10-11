@@ -10,4 +10,26 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef HUMANA_CPP
+# define HUMANA_CPP
 
+# include <iostream>
+# include <stdio.h>
+# include <limits>
+# include <string>
+#include "Weapon.hpp"
+
+class HumanA
+{
+private:
+	// std::string _Weapon;
+	std::string _name;
+	Weapon &_weapon;
+	
+public:
+	HumanA(std::string name, Weapon &weapon);
+	~HumanA(void);
+	void attack(void);
+};
+
+#endif

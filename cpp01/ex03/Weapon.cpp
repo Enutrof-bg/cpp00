@@ -21,3 +21,13 @@ void Weapon::setType(std::string newType)
 {
 	type = newType;
 }
+
+Weapon::Weapon(std::string name) : type(name)
+{
+	return ;
+}
+
+Weapon::~Weapon()
+{
+	return ;
+}

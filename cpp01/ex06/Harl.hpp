@@ -1,35 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.hpp                                         :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kevwang <kevwang@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/10 13:32:14 by kevwang           #+#    #+#             */
-/*   Updated: 2025/10/10 13:32:15 by kevwang          ###   ########.fr       */
+/*   Created: 2025/10/11 13:22:15 by kevwang           #+#    #+#             */
+/*   Updated: 2025/10/11 13:22:16 by kevwang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WEAPON_HPP
-# define WEAPON_HPP
+#ifndef HARL_HPP
+# define HARL_HPP
 
-# include <iostream>
-# include <stdio.h>
-# include <limits>
 # include <string>
+# include <iostream>
+# include <limits>
+# include <stdio.h>
 
-class Weapon
+class Harl
 {
 private:
-	std::string type;
+	void debug(void);
+	void info(void);
+	void warning(void);
+	void error(void);
 
 public:
-	Weapon();
-	Weapon(std::string name);
-	~Weapon(void);
-	std::string getType(void);
-	void setType(std::string newType);
+	Harl(void);
+	~Harl(void);
+	void complain(std::string level);
 };
 
 #endif
-

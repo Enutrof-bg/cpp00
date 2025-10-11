@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: kevwang <kevwang@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/10/10 13:31:57 by kevwang           #+#    #+#              #
-#    Updated: 2025/10/10 13:31:58 by kevwang          ###   ########.fr        #
+#    Created: 2025/10/11 13:21:53 by kevwang           #+#    #+#              #
+#    Updated: 2025/10/11 13:21:55 by kevwang          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,9 +14,9 @@ CC = c++
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-FILE = main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
-#HumanB.cpp
-NAME = zombie
+FILE = main.cpp Harl.cpp
+
+NAME = harlFilter
 
 all:${NAME}
 
@@ -24,7 +24,7 @@ ${NAME}: ${FILE}
 	${CC} ${CFLAGS} $^ -o ${NAME}
 
 clean: 
-	rm -f main.o HumanA.o HumanB.o Weapon.o
+	rm -f main.o
 
 fclean:clean
 	rm -f zombie

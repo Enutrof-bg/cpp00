@@ -11,3 +11,28 @@
 /* ************************************************************************** */
 
 
+#ifndef HUMANB_CPP
+# define HUMANB_CPP
+
+# include <iostream>
+# include <stdio.h>
+# include <limits>
+# include <string>
+# include "Weapon.hpp"
+
+class HumanB
+{
+private:
+	// std::string _Weapon;
+	std::string _name;
+	Weapon *_weapon;
+	
+public:
+	HumanB(std::string name);
+	void setWeapon(Weapon &weapon);
+	HumanB(std::string name, Weapon &weapon);
+	~HumanB(void);
+	void attack(void);
+};
+
+#endif
