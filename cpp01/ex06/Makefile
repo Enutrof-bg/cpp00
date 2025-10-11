@@ -24,10 +24,10 @@ ${NAME}: ${FILE}
 	${CC} ${CFLAGS} $^ -o ${NAME}
 
 clean: 
-	rm -f main.o
+	rm -f main.o Harl.o
 
 fclean:clean
-	rm -f zombie
+	rm -f harlFilter
 
 re:fclean
 	make

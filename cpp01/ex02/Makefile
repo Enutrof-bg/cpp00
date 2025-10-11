@@ -16,7 +16,7 @@ CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 FILE = main.cpp
 
-NAME = zombie
+NAME = main
 
 all:${NAME}
 
@@ -27,7 +27,7 @@ clean:
 	rm -f main.o
 
 fclean:clean
-	rm -f zombie
+	rm -f main
 
 re:fclean
 	make

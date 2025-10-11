@@ -16,7 +16,7 @@ CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 FILE = main.cpp Harl.cpp
 
-NAME = zombie
+NAME = Harl
 
 all:${NAME}
 
@@ -24,10 +24,10 @@ ${NAME}: ${FILE}
 	${CC} ${CFLAGS} $^ -o ${NAME}
 
 clean: 
-	rm -f main.o
+	rm -f main.o Harl.o
 
 fclean:clean
-	rm -f zombie
+	rm -f Harl
 
 re:fclean
 	make

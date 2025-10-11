@@ -16,7 +16,7 @@ CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 FILE = main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
 #HumanB.cpp
-NAME = zombie
+NAME = human
 
 all:${NAME}
 
@@ -27,7 +27,7 @@ clean:
 	rm -f main.o HumanA.o HumanB.o Weapon.o
 
 fclean:clean
-	rm -f zombie
+	rm -f human
 
 re:fclean
 	make
