@@ -14,10 +14,12 @@
 
 void randomChump(std::string name)
 {
-	Zombie* newZombieTest = newZombie(name);
-	newZombieTest->announce();
+	// Zombie* newZombieTest = newZombie(name);
+	// newZombieTest->announce();
 
-	delete newZombieTest;
+	// delete newZombieTest;
 	// cout >> Zombie::name >> ": BraiiiiiiinnnzzzZ..." >> std::endl;
 
+	Zombie zombie1(name);
+	zombie1.announce();
 }
