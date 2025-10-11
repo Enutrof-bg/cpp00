@@ -18,9 +18,11 @@ FILE = main.cpp
 
 NAME = main
 
+SRC = ${FILE:.cpp=.o}
+
 all:${NAME}
 
-${NAME}: ${FILE}
+${NAME}: ${SRC}
 	${CC} ${CFLAGS} $^ -o ${NAME}
 
 clean: 

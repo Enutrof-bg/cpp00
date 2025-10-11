@@ -18,9 +18,11 @@ FILE = main.cpp Zombie.cpp ZombieHorde.cpp
 
 NAME = zombie
 
+SRC = ${FILE:.cpp=.o}
+
 all:${NAME}
 
-${NAME}: ${FILE}
+${NAME}: ${SRC}
 	${CC} ${CFLAGS} $^ -o ${NAME}
 
 clean: 

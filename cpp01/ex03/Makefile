@@ -18,9 +18,11 @@ FILE = main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
 #HumanB.cpp
 NAME = human
 
+SRC = ${FILE:.cpp=.o}
+
 all:${NAME}
 
-${NAME}: ${FILE}
+${NAME}: ${SRC}
 	${CC} ${CFLAGS} $^ -o ${NAME}
 
 clean: 

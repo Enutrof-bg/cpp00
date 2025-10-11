@@ -18,9 +18,11 @@ FILE = main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
 # newZombie.cpp randomChump.cpp
 NAME = zombie
 
+SRC = ${FILE:.cpp=.o}
+
 all:${NAME}
 
-${NAME}: ${FILE}
+${NAME}: ${SRC}
 	${CC} ${CFLAGS} $^ -o ${NAME}
 
 clean: 

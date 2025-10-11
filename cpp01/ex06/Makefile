@@ -18,9 +18,11 @@ FILE = main.cpp Harl.cpp
 
 NAME = harlFilter
 
+SRC = ${FILE:.cpp=.o}
+
 all:${NAME}
 
-${NAME}: ${FILE}
+${NAME}: ${SRC}
 	${CC} ${CFLAGS} $^ -o ${NAME}
 
 clean: 
