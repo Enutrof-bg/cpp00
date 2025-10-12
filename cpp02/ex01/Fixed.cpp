@@ -26,6 +26,16 @@ Fixed::~Fixed()
 	return ;
 }
 
+Fixed::Fixed(const int val):_fixed(val)
+{
+	return ;
+}
+
+Fixed::Fixed(const float val): _fixed(val)
+{
+	return ;
+}
+
 Fixed::Fixed(const Fixed &copy):_fixed(copy._fixed)
 {
 	std::cout << "Copy constructor called" << std::endl;
@@ -47,6 +57,16 @@ int Fixed::getRawBits(void)
 }
 
 void Fixed::setRawBits(int const raw)
+{
+
+}
+
+float Fixed::toFloat(void) const
+{
+	// this._fixed 
+}
+
+int Fixed::toInt(void) const
 {
 
 }
