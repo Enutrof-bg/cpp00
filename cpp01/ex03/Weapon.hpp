@@ -27,6 +27,7 @@ public:
 	Weapon();
 	Weapon(std::string name);
 	~Weapon(void);
+	
 	std::string getType(void);
 	void setType(std::string newType);
 };

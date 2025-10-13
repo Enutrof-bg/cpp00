@@ -22,6 +22,11 @@ void Weapon::setType(std::string newType)
 	type = newType;
 }
 
+Weapon::Weapon():type("")
+{
+	return ;
+}
+
 Weapon::Weapon(std::string name) : type(name)
 {
 	return ;
