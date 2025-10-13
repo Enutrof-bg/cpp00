@@ -25,6 +25,9 @@ all:${NAME}
 ${NAME}: ${SRC}
 	${CC} ${CFLAGS} $^ -o ${NAME}
 
+%.o:%.cpp
+	${CC} ${CFLAGS} -c $^
+	
 clean: 
 	rm -f main.o HumanA.o HumanB.o Weapon.o
 
