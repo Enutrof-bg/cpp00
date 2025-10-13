@@ -63,9 +63,11 @@ int main(int argc, char **argv)
 				if (allText[i + j] == toFind[j])
 					compteur++;
 			}
+			// i = find(allText[i], allText.length(), toFind);
 			if (compteur == toFind.length())
 			{
 				result = result + toReplace;
+				// result.insert(i, toReplace);
 				i = i + toFind.length() - 1;
 			}
 			else
