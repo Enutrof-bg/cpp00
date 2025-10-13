@@ -16,16 +16,22 @@ int main()
 {
 	int size = 10;
 	Zombie* firstZombie = zombieHorde(size, "Bernard");
-
 	for (int i = 0; i < size; i++)
 	{
 		// std::cout << i << " ";
 		firstZombie[i].announce();
 	}
+	// delete [] firstZombie;
 
-	// for (int i = 0; i < size; i++)
-	// {
-	// 	delete firstZombie[i];
-	// }
+	size = 8;
+	Zombie* secondZombie = zombieHorde(size, "hello");
+	for (int j = 0; j < size; j++)
+	{
+		// std::cout << j << " ";
+		secondZombie[j].announce();
+	}
+
 	delete [] firstZombie;
+	delete [] secondZombie;
+	// delete [] firstZombie;
 }
