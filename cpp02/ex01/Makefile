@@ -10,26 +10,29 @@
 #                                                                              #
 # **************************************************************************** #
 
-CC = c++
+CXX = c++
 
-CFLAGS = -Wall -Wextra -Werror -std=c++98
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
 FILE = main.cpp Fixed.cpp
 
-NAME = Fixed
+NAME = fixed
 
 SRC = ${FILE:.cpp=.o}
 
 all:${NAME}
 
 ${NAME}: ${SRC}
-	${CC} ${CFLAGS} $^ -o ${NAME}
+	${CXX} ${CXXFLAGS} $^ -o ${NAME}
+
+%.o:%.cpp
+	${CXX} ${CXXFLAGS} -c $^
 
 clean: 
 	rm -f main.o Fixed.o
 
 fclean:clean
-	rm -f Fixed
+	rm -f fixed
 
 re:fclean
 	make

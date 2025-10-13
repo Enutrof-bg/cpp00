@@ -29,7 +29,7 @@ public:
 	Fixed(const Fixed &copy);
 	Fixed &operator=(const Fixed &other);
 
-	int getRawBits(void);
+	int getRawBits(void) const;
 	void setRawBits(int const raw);
 	float toFloat(void) const;
 	int toInt(void) const;
