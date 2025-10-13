@@ -16,9 +16,9 @@ HumanB::HumanB(std::string name) : _name(name), _weapon(NULL)
 {
 }
 
-HumanB::HumanB(std::string name, Weapon &weapon) : _name(name), _weapon(&weapon)
-{
-}
+// HumanB::HumanB(std::string name, Weapon &weapon) : _name(name), _weapon(&weapon)
+// {
+// }
 
 HumanB::~HumanB()
 {

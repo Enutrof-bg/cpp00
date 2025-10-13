@@ -63,27 +63,12 @@ void Harl::complain(std::string level)
 	case 0:
 		std::cout << "[ DEBUG ]" << std::endl;
 		Harl::debug();
-		std::cout << "[ INFO ]" << std::endl;
-		Harl::info();
-		std::cout << "[ WARNING ]" << std::endl;
-		Harl::warning();
-		std::cout << "[ Error ]" << std::endl;
-		Harl::error();
-		break;
 	case 1:
 		std::cout << "[ INFO ]" << std::endl;
 		Harl::info();
-		std::cout << "[ WARNING ]" << std::endl;
-		Harl::warning();
-		std::cout << "[ Error ]" << std::endl;
-		Harl::error();
-		break;
 	case 2:
 		std::cout << "[ WARNING ]" << std::endl;
 		Harl::warning();
-		std::cout << "[ Error ]" << std::endl;
-		Harl::error();
-		break;
 	case 3:
 		std::cout << "[ Error ]" << std::endl;
 		Harl::error();
