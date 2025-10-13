@@ -10,9 +10,9 @@
 #                                                                              #
 # **************************************************************************** #
 
-CC = c++
+CXX = c++
 
-CFLAGS = -Wall -Wextra -Werror -std=c++98
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
 FILE = main.cpp Harl.cpp
 
@@ -27,7 +27,7 @@ ${NAME}: ${SRC}
 
 %.o:%.cpp
 	${CC} ${CFLAGS} -c $^
-	
+
 clean: 
 	rm -f main.o Harl.o
 
