@@ -54,9 +54,9 @@ int main(int argc, char **argv)
 	std::string toReplace = argv[3];
 	std::string result;
 	unsigned int compteur = 0;
-	for (unsigned int i = 0; i < allText.length(); i++)
+	if (toFind.length() > 0)
 	{
-		if (toFind.length() > 0)
+		for (unsigned int i = 0; i < allText.length(); i++)
 		{
 			for (unsigned int j = 0; j < toFind.length(); j++)
 			{

@@ -23,10 +23,10 @@ SRC = ${FILE:.cpp=.o}
 all:${NAME}
 
 ${NAME}: ${SRC}
-	${CC} ${CFLAGS} $^ -o ${NAME}
+	${CXX} ${CXXFLAGS} $^ -o ${NAME}
 
 %.o:%.cpp
-	${CC} ${CFLAGS} -c $^
+	${CXX} ${CXXFLAGS} -c $^
 
 clean: 
 	rm -f main.o
