@@ -56,21 +56,24 @@ int main(int argc, char **argv)
 	unsigned int compteur = 0;
 	for (unsigned int i = 0; i < allText.length(); i++)
 	{
-		for (unsigned int j = 0; j < toFind.length(); j++)
+		if (toFind.length() > 0)
 		{
-			if (allText[i + j] == toFind[j])
-				compteur++;
+			for (unsigned int j = 0; j < toFind.length(); j++)
+			{
+				if (allText[i + j] == toFind[j])
+					compteur++;
+			}
+			if (compteur == toFind.length())
+			{
+				result = result + toReplace;
+				i = i + toFind.length() - 1;
+			}
+			else
+			{
+				result = result + allText[i];
+			}
+			compteur = 0;
 		}
-		if (compteur == toFind.length())
-		{
-			result = result + toReplace;
-			i = i + toFind.length() - 1;
-		}
-		else
-		{
-			result = result + allText[i];
-		}
-		compteur = 0;
 	}
 	allText = result;
 	output << allText;
