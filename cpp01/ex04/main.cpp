@@ -53,33 +53,39 @@ int main(int argc, char **argv)
 	std::string toFind = argv[2];
 	std::string toReplace = argv[3];
 	std::string result;
-	unsigned int compteur = 0;
+	// unsigned int compteur = 0;
+	size_t res = 0;
 	if (toFind.length() > 0)
 	{
-		for (unsigned int i = 0; i < allText.length(); i++)
+		while ((res = allText.find(toFind, res)) != (std::string::npos))
 		{
-			for (unsigned int j = 0; j < toFind.length(); j++)
-			{
-				if (allText[i + j] == toFind[j])
-					compteur++;
-			}
-			// i = find(allText[i], allText.length(), toFind);
-			if (compteur == toFind.length())
-			{
-				result = result + toReplace;
-				// result.insert(i, toReplace);
-				i = i + toFind.length() - 1;
-			}
-			else
-			{
-				result = result + allText[i];
-			}
-			compteur = 0;
+			allText.erase(res, toFind.length());
+			allText.insert(res, toReplace);
+			res = res + toFind.length();
 		}
+
+		// for (unsigned int i = 0; i < allText.length(); i++)
+		// {
+		// 	for (unsigned int j = 0; j < toFind.length(); j++)
+		// 	{
+		// 		if (allText[i + j] == toFind[j])
+		// 			compteur++;
+		// 	}
+		// 	if (compteur == toFind.length())
+		// 	{
+		// 		result = result + toReplace;
+		// 		i = i + toFind.length() - 1;
+		// 	}
+		// 	else
+		// 	{
+		// 		result = result + allText[i];
+		// 	}
+		// 	compteur = 0;
+		// }
 	}
-	allText = result;
+	// allText = result;
 	output << allText;
-	// std::cout << allText << std::endl;
+
 	input.close();
 	output.close();
 }
