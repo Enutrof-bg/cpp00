@@ -85,6 +85,98 @@ int Fixed::toInt(void) const
 	// return (_fixed << _bits);
 }
 
+bool Fixed::operator>(const Fixed &other)
+{
+	// if (operator > other)
+		// return operator;
+	return (_fixed > other._fixed);
+}
+
+bool Fixed::operator<(const Fixed &other)
+{
+	return (_fixed < other._fixed);
+}
+
+bool Fixed::operator>=(const Fixed &other)
+{
+	return (_fixed >= other._fixed);
+}
+
+bool Fixed::operator<=(const Fixed &other)
+{
+	return (_fixed <= other._fixed);
+}
+
+bool Fixed::operator==(const Fixed &other)
+{
+	return (_fixed == other._fixed);
+}
+
+bool Fixed::operator!=(const Fixed &other)
+{
+	return (_fixed != other._fixed);
+}
+
+Fixed Fixed::operator+(const Fixed &other)
+{
+	// Fixed temp;
+	// temp._fixed = other
+	// return (Fixed(this->_fixed + other._fixed));
+	Fixed result;
+	result.setRawBits(this->_fixed + other._fixed);
+	return result;
+}
+
+Fixed Fixed::operator-(const Fixed &other)
+{
+	// return (Fixed(this->_fixed - other._fixed));
+	Fixed result;
+	result.setRawBits(this->_fixed - other._fixed);
+	return result;
+}
+
+Fixed Fixed::operator*(const Fixed &other)
+{
+	// return (Fixed(this->_fixed * other._fixed));
+	Fixed result;
+	result.setRawBits(this->_fixed * other._fixed >> _bits);
+	return result;
+}
+
+Fixed Fixed::operator/(const Fixed &other)
+{
+	// return (Fixed(this->_fixed / other._fixed));
+	Fixed result;
+	result.setRawBits(this->_fixed << _bits/ other._fixed);
+	return result;
+}
+
+Fixed &Fixed::operator++(void)
+{
+	_fixed++;
+	return *this;
+}
+
+Fixed Fixed::operator++(int)
+{
+	Fixed temp = *this;
+	++*this;
+	return temp;
+}
+
+Fixed &Fixed::operator--(void)
+{
+	_fixed--;
+	return *this;
+}
+
+Fixed Fixed::operator--(int)
+{
+	Fixed temp = *this;
+	--*this;
+	return temp;
+}
+
 std::ostream &operator<<(std::ostream &out, const Fixed &fixed)
 {
 	out << fixed.toFloat();

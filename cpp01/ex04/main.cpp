@@ -61,7 +61,7 @@ int main(int argc, char **argv)
 		{
 			allText.erase(res, toFind.length());
 			allText.insert(res, toReplace);
-			res = res + toFind.length();
+			res = res + toReplace.length();
 		}
 
 		// for (unsigned int i = 0; i < allText.length(); i++)
