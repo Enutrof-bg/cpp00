@@ -15,12 +15,12 @@
 
 int main( void )
 {
-	Fixed a;
-	Fixed const b( 10 );
-	Fixed const c( 42.42f );
-	Fixed const d( b );
+	// Fixed a;
+	// Fixed const b( 10 );
+	// Fixed const c( 42.42f );
+	// Fixed const d( b );
 
-	a = Fixed( 1234.4321f );
+	// a = Fixed( 1234.4321f );
 
 	// std::cout << "a is " << a << std::endl;
 	// std::cout << "b is " << b << std::endl;
@@ -34,5 +34,11 @@ int main( void )
 
 	// std::cout << "Test1:" << (1 << 8) <<std::endl;
 	// std::cout << "Test2:" << (1234 >> 8) <<std::endl;
+
+	Fixed test(42);
+	std::cout << "Test1:" << test.getRawBits() <<std::endl;
+	std::cout << "Test1:" << test.toInt() <<std::endl;
+	std::cout << "Test1:" << test.toFloat() <<std::endl;
+	std::cout << "test is " << test << std::endl;
 	return 0;
 }
