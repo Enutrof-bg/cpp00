@@ -1,0 +1,26 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kevwang <kevwang@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/16 16:10:03 by kevwang           #+#    #+#             */
+/*   Updated: 2025/10/16 16:10:03 by kevwang          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#pragma once 
+
+#include <iostream>
+#include <string>
+#include <stdio.h>
+
+class Animal
+{
+protected:
+	std::string type;
+
+public:
+	void makeSound();
+};
