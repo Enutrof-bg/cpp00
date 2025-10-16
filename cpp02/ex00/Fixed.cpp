@@ -17,19 +17,16 @@ const int Fixed::_bits = 8;
 Fixed::Fixed() : _fixed(0)
 {
 	std::cout << "Default constructor called" << std::endl;
-	return ;
 }
 
 Fixed::~Fixed()
 {
 	std::cout << "Destructor called" << std::endl;
-	return ;
 }
 
 Fixed::Fixed(const Fixed &copy)
 {
 	std::cout << "Copy constructor called" << std::endl;
-	// _fixed = (copy).getRawBits();
 	*this = copy;
 	return ;
 }
