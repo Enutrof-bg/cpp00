@@ -16,33 +16,33 @@ const int Fixed::_bits = 8;
 
 Fixed::Fixed() : _fixed(0)
 {
-	std::cout << "Default constructor called" << std::endl;
+	// std::cout << "Default constructor called" << std::endl;
 }
 
 Fixed::~Fixed()
 {
-	std::cout << "Destructor called" << std::endl;
+	// std::cout << "Destructor called" << std::endl;
 }
 
 Fixed::Fixed(const int val):_fixed(val << _bits)
 {
-	std::cout << "Int constructor called" << std::endl;
+	// std::cout << "Int constructor called" << std::endl;
 }
 
 Fixed::Fixed(const float val): _fixed(roundf(val * (1 << _bits)))
 {
-	std::cout << "Float constructor called" << std::endl;
+	// std::cout << "Float constructor called" << std::endl;
 }
 
 Fixed::Fixed(const Fixed &copy)
 {
-	std::cout << "Copy constructor called" << std::endl;
+	// std::cout << "Copy constructor called" << std::endl;
 	*this = copy;
 }
 
 Fixed &Fixed::operator=(const Fixed &other)
 {
-	std::cout << "Copy assignment operator called" << std::endl;
+	// std::cout << "Copy assignment operator called" << std::endl;
 	if (this != &other)
 	{
 		// _fixed = other.getRawBits();
@@ -53,7 +53,7 @@ Fixed &Fixed::operator=(const Fixed &other)
 
 int Fixed::getRawBits(void) const
 {
-	std::cout << "getRawBits member function called" << std::endl;
+	// std::cout << "getRawBits member function called" << std::endl;
 	return _fixed;
 }
 
@@ -103,28 +103,28 @@ bool Fixed::operator!=(const Fixed &other)
 	return (_fixed != other._fixed);
 }
 
-Fixed Fixed::operator+(const Fixed &other)
+Fixed Fixed::operator+(const Fixed &other) const
 {
 	Fixed result;
 	result.setRawBits(this->_fixed + other._fixed);
 	return result;
 }
 
-Fixed Fixed::operator-(const Fixed &other)
+Fixed Fixed::operator-(const Fixed &other) const
 {
 	Fixed result;
 	result.setRawBits(this->_fixed - other._fixed);
 	return result;
 }
 
-Fixed Fixed::operator*(const Fixed &other)
+Fixed Fixed::operator*(const Fixed &other) const
 {
 	Fixed result;
 	result.setRawBits((this->_fixed * (other._fixed >> _bits)));
 	return result;
 }
 
-Fixed Fixed::operator/(const Fixed &other)
+Fixed Fixed::operator/(const Fixed &other) const
 {
 	if (other._fixed == 0)
 	{
