@@ -10,7 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
 #include "Fixed.hpp"
 
 int main( void )
@@ -22,8 +21,10 @@ int main( void )
 
 	a = Fixed( 1234.4321f );
 
+	// std::cout << std::setprecision(20) << std::endl;
 	std::cout << "a is " << a << std::endl;
 	std::cout << "b is " << b << std::endl;
+	// std::cout << std::setprecision(20) << std::endl;
 	std::cout << "c is " << c << std::endl;
 	std::cout << "d is " << d << std::endl;
 	
@@ -34,22 +35,22 @@ int main( void )
 
 
 
-	std::cout << "a is " << a.toFloat() << " as float" << std::endl;
-	std::cout << "b is " << b.toFloat() << " as float" << std::endl;
-	std::cout << "c is " << c.toFloat() << " as float" << std::endl;
-	std::cout << "d is " << d.toFloat() << " as float" << std::endl;
+	// std::cout << "a is " << a.toFloat() << " as float" << std::endl;
+	// std::cout << "b is " << b.toFloat() << " as float" << std::endl;
+	// std::cout << "c is " << c.toFloat() << " as float" << std::endl;
+	// std::cout << "d is " << d.toFloat() << " as float" << std::endl;
 
-	Fixed test(42);
-	std::cout << "Test1:" << test.getRawBits() <<std::endl;
-	std::cout << "Test1:" << test.toInt() <<std::endl;
-	std::cout << "Test1:" << test.toFloat() <<std::endl;
-	std::cout << "test is " << test << std::endl;
+	// Fixed test(42);
+	// std::cout << "Test1:" << test.getRawBits() <<std::endl;
+	// std::cout << "Test1:" << test.toInt() <<std::endl;
+	// std::cout << "Test1:" << test.toFloat() <<std::endl;
+	// std::cout << "test is " << test << std::endl;
 
-	Fixed toto(50.6f);
-	std::cout << "toto:" << toto.getRawBits() <<std::endl;
-	std::cout << "toto:" << toto.toInt() <<std::endl;
-	std::cout << "toto:" << toto.toFloat() <<std::endl;
-	// std::cout << "toto:" << std::setprecision(20) << toto.toFloat() <<std::endl;
-	std::cout << "toto is " << toto << std::endl;
+	// Fixed toto(50.6f);
+	// std::cout << "toto:" << toto.getRawBits() <<std::endl;
+	// std::cout << "toto:" << toto.toInt() <<std::endl;
+	// std::cout << "toto:" << toto.toFloat() <<std::endl;
+	// // std::cout << "toto:" << std::setprecision(20) << toto.toFloat() <<std::endl;
+	// std::cout << "toto is " << toto << std::endl;
 	return 0;
 }
