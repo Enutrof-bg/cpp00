@@ -56,6 +56,10 @@ public:
 	Fixed &operator--(void);
 	Fixed operator--(int);
 
+	static Fixed &min(Fixed &n1, Fixed &n2);
+	static Fixed &max(Fixed &n1, Fixed &n2);
+	const static Fixed &min(const Fixed &n1, const Fixed &n2);
+	const static Fixed &max(const Fixed &n1, const Fixed &n2);
 	// Fixed
 
 };

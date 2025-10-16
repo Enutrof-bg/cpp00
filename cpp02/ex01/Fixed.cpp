@@ -32,9 +32,6 @@ Fixed::Fixed(const int val):_fixed(val << _bits)
 Fixed::Fixed(const float val): _fixed(roundf(val * (1 << _bits)))
 {
 	std::cout << "Float constructor called" << std::endl;
-	// _fixed = roundf(val * (1 << _bits));
-	// _fixed = roundf(val / (1 << _bits);
-	// _fixed = (roundf(val << _bits));
 }
 
 Fixed::Fixed(const Fixed &copy)
