@@ -103,28 +103,28 @@ bool Fixed::operator!=(const Fixed &other)
 	return (_fixed != other._fixed);
 }
 
-Fixed Fixed::operator+(const Fixed &other) const
+Fixed Fixed::operator+(const Fixed &other)
 {
 	Fixed result;
 	result.setRawBits(this->_fixed + other._fixed);
 	return result;
 }
 
-Fixed Fixed::operator-(const Fixed &other) const
+Fixed Fixed::operator-(const Fixed &other)
 {
 	Fixed result;
 	result.setRawBits(this->_fixed - other._fixed);
 	return result;
 }
 
-Fixed Fixed::operator*(const Fixed &other) const
+Fixed Fixed::operator*(const Fixed &other)
 {
 	Fixed result;
 	result.setRawBits((this->_fixed * (other._fixed >> _bits)));
 	return result;
 }
 
-Fixed Fixed::operator/(const Fixed &other) const
+Fixed Fixed::operator/(const Fixed &other)
 {
 	if (other._fixed == 0)
 	{
