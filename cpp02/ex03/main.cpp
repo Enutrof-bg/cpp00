@@ -10,7 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
 #include "Fixed.hpp"
 #include "Point.hpp"
 #include "Bsp.hpp"
@@ -36,6 +35,6 @@ int main( void )
 		std::cout << "Inside" << std::endl;
 	else
 		std::cout << "Outside" << std::endl;
-	
+
 	return 0;
 }
