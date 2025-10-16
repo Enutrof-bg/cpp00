@@ -136,7 +136,7 @@ Fixed Fixed::operator/(const Fixed &other)
 	return result;
 }
 
-Fixed &Fixed::operator++(void)
+Fixed Fixed::operator++(void)
 {
 	_fixed++;
 	return *this;
@@ -149,7 +149,7 @@ Fixed Fixed::operator++(int)
 	return temp;
 }
 
-Fixed &Fixed::operator--(void)
+Fixed Fixed::operator--(void)
 {
 	_fixed--;
 	return *this;

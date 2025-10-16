@@ -51,10 +51,10 @@ public:
 	Fixed operator*(const Fixed &other);
 	Fixed operator/(const Fixed &other);
 
-	Fixed &operator++(void);
+	Fixed operator++(void);
 	Fixed operator++(int);
 
-	Fixed &operator--(void);
+	Fixed operator--(void);
 	Fixed operator--(int);
 
 	static Fixed &min(Fixed &n1, Fixed &n2);

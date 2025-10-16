@@ -14,7 +14,7 @@ CXX = c++
 
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-FILE = main.cpp Fixed.cpp Point.cpp
+FILE = main.cpp Fixed.cpp Point.cpp Bsp.cpp
 
 NAME = fixed
 
@@ -29,7 +29,7 @@ ${NAME}: ${SRC}
 	${CXX} ${CXXFLAGS} -c $^
 
 clean: 
-	rm -f main.o Fixed.o Point.o
+	rm -f main.o Fixed.o Point.o Bsp.o
 
 fclean:clean
 	rm -f fixed

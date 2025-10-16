@@ -28,6 +28,7 @@ int main( void )
 
 	std::cout << b << std::endl;
 
+	std::cout << Fixed::max( a, b ) << std::endl;
 
 	std::cout << std::endl;
 	Fixed t1(10);
