@@ -22,20 +22,14 @@ Point::Point(const float i, const float j): x(Fixed(i)), y(Fixed(j))
 	// std::cout << "Default constructor called" << std::endl;
 }
 
-Point::Point(const Point &copy):x(copy.x), y(copy.y)
+Point::Point(const Point &copy) : x(copy.x), y(copy.y)
 {
 	// std::cout << "Copy constructor called" << std::endl;
-	// *this = copy;
 }
 
 Point &Point::operator=(const Point &other)
 {
 	// std::cout << "Copy assignment operator called" << std::endl;
-	// if (this != &other)
-	// {
-	// 	x = other.x;
-	// 	y = other.y;
-	// }
 	(void)other;
 	return *this;
 }
@@ -45,11 +39,11 @@ Point::~Point()
 	// std::cout << "Destructor called" << std::endl;
 }
 
-int Point::getX() const 
+float Point::getX() const 
 {
-	return (x.toInt());
+	return (x.toFloat());
 }
-int Point::getY() const
+float Point::getY() const
 {
-	return (y.toInt());
+	return (y.toFloat());
 }

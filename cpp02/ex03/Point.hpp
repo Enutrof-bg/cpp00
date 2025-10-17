@@ -21,8 +21,8 @@
 class Point
 {
 private:
-	const  Fixed x;
-	const  Fixed y;
+	const Fixed x;
+	const Fixed y;
 	
 public:
 	Point();
@@ -32,8 +32,8 @@ public:
 
 	~Point();
 
-	int getX() const;
-	int getY() const;
+	float getX() const;
+	float getY() const;
 };
 
 #endif
