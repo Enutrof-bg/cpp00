@@ -86,5 +86,21 @@ int main( void )
 	std::cout << Fixed::max(z1, z2) << std::endl;
 	std::cout << Fixed::max( a, b ) << std::endl;
 
+	float f1 = 0.255f;
+	float f2 = 100000.1f;
+	Fixed f3(0.255f);
+	Fixed f4(100000.1f);
+
+	Fixed f5(Fixed(0.1f) + Fixed(0.2f));
+
+	std::cout << "     float 0.1: " << f1 << std::endl;
+	std::cout << "     fixed 0.1: " << f3 << std::endl;
+
+	std::cout << "float 100000.1: " << f2 << std::endl;
+	std::cout << "fixed 100000.1: " << f4 << std::endl;
+
+	std::cout << " float 0.1 + 0.2: " << 0.1f + 0.2f << std::endl;
+	std::cout << " fixed 0.1 + 0.2: " << f5 << std::endl;
+
 	return 0;
 }

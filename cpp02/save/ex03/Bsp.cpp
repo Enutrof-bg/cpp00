@@ -28,6 +28,8 @@ bool bsp( Point const a, Point const b, Point const c, Point const point)
 
 	float A3 = area(a.getX(), a.getY(), b.getX(), b.getY(), point.getX(), point.getY());
 
+    std::cout << A1 + A2 +A3 << std::endl;
+    std::cout << A << std::endl;
 	return (A1 + A2 + A3 == A);
 }
 
