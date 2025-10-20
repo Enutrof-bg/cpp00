@@ -18,6 +18,10 @@ FragTrap::FragTrap() : ClapTrap()
 	_hitPoints = 100;
 	_energyPoints = 100;
 	_attackDamage = 30;
+
+	std::cout << "frag hp" << _hitPoints << std::endl;
+	std::cout << "frag ep" << _energyPoints << std::endl;
+	std::cout << "frag ad" << _attackDamage << std::endl;
 }
 
 FragTrap::FragTrap(std::string name) : ClapTrap(name)
@@ -32,6 +36,10 @@ FragTrap::FragTrap(std::string name) : ClapTrap(name)
 	_hitPoints = 100;
 	_energyPoints = 100;
 	_attackDamage = 30;
+
+	std::cout << "frag hp" << _hitPoints << std::endl;
+	std::cout << "frag ep" << _energyPoints << std::endl;
+	std::cout << "frag ad" << _attackDamage << std::endl;
 }
 
 FragTrap::FragTrap(const FragTrap &copy): ClapTrap(copy)

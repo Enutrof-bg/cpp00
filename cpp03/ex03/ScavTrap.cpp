@@ -12,12 +12,16 @@
 
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap()
+ScavTrap::ScavTrap() : ClapTrap()
 {
 	std::cout << "ScavTrap Derived constructor called" << std::endl;
 	_hitPoints = 100;
 	_energyPoints = 50;
 	_attackDamage = 20;
+
+	std::cout << "scav hp" << _hitPoints << std::endl;
+	std::cout << "scav ep" << _energyPoints << std::endl;
+	std::cout << "scav ad" << _attackDamage << std::endl;
 }
 
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
@@ -32,6 +36,10 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 	_hitPoints = 100;
 	_energyPoints = 50;
 	_attackDamage = 20;
+
+	std::cout << "scav hp" << _hitPoints << std::endl;
+	std::cout << "scav ep" << _energyPoints << std::endl;
+	std::cout << "scav ad" << _attackDamage << std::endl;
 }
 
 ScavTrap::ScavTrap(const ScavTrap &copy): ClapTrap(copy)

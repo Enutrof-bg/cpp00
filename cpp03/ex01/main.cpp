@@ -39,7 +39,7 @@ int main()
 
 	ScavTrap zozo = toto;
 	
-	ScavTrap scav(zozo);
+	ScavTrap scav;
 	
 	scav.attack("Aba");
 

@@ -20,6 +20,10 @@ DiamondTrap::DiamondTrap() : ClapTrap("_clap_name")
 	_hitPoints = FragTrap::_hitPoints;
 	_energyPoints = ScavTrap::_energyPoints;
 	_attackDamage = FragTrap::_attackDamage;
+
+	std::cout << "diamond hp" << _hitPoints << std::endl;
+	std::cout << "diamond ep" << _energyPoints << std::endl;
+	std::cout << "diamond ad" << _attackDamage << std::endl;
 }
 
 DiamondTrap::DiamondTrap(std::string name):ClapTrap(name + "_clap_name")
@@ -29,6 +33,11 @@ DiamondTrap::DiamondTrap(std::string name):ClapTrap(name + "_clap_name")
 	_hitPoints = FragTrap::_hitPoints;
 	_energyPoints = ScavTrap::_energyPoints;
 	_attackDamage = FragTrap::_attackDamage;
+
+	std::cout << "diamond hp" << _hitPoints << std::endl;
+	std::cout << "diamond ep" << _energyPoints << std::endl;
+	std::cout << "diamond ad" << _attackDamage << std::endl;
+
 }
 
 DiamondTrap::~DiamondTrap()

@@ -50,8 +50,9 @@ int main()
 	// scav.takeDamage(200);
 
 	// scav.beRepaired(100);
+	DiamondTrap test;
 
-	DiamondTrap diamond("diamond");
+	DiamondTrap diamond(test);
 
 	diamond.attack("abc");
 
