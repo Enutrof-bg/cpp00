@@ -34,7 +34,6 @@ clean:
 fclean:clean
 	rm -f claptrap
 
-re:fclean
-	make
+re:fclean all
 
 
