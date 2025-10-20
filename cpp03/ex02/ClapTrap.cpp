@@ -27,10 +27,6 @@ ClapTrap::ClapTrap(std::string name)
 ClapTrap::ClapTrap(const ClapTrap &copy)
 {
 	std::cout << "ClapTrap Copy constructor called" << std::endl;
-	// _name = copy._name;
-	// _hitPoints = copy._hitPoints;
-	// _energyPoints = copy._energyPoints;
-	// _attackDamage = copy._attackDamage;
 	*this = copy;
 }
 

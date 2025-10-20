@@ -25,14 +25,8 @@ FragTrap::FragTrap() : ClapTrap()
 }
 
 FragTrap::FragTrap(std::string name) : ClapTrap(name)
-		/*:_name(name), _hitPoints(100), _energyPoints(50), _attackDamage(20)*/
 {
 	std::cout << "FragTrap Derived constructor called" << std::endl;
-	// setName(name);
-	// setHitPoints(100);
-	// setEnergyPoints(50);
-	// setAttackDamage(20);
-	// _name = name;
 	_hitPoints = 100;
 	_energyPoints = 100;
 	_attackDamage = 30;
