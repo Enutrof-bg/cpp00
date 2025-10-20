@@ -15,41 +15,41 @@
 
 int main()
 {
-	// ClapTrap Albert("Albert");
+	ClapTrap Albert("Albert");
 
-	// ClapTrap Tata(Albert);
+	ClapTrap Tata(Albert);
 
-	// ClapTrap Toto;
+	ClapTrap Toto;
 	
-	// Toto=Tata;
+	Toto=Tata;
 
-	// Toto.attack("Bernard");
+	Toto.attack("Bernard");
 
-	// Toto.takeDamage(5);
+	Toto.takeDamage(5);
 
-	// Toto.beRepaired(10);
+	Toto.beRepaired(10);
 
-	// Toto.takeDamage(20);
+	Toto.takeDamage(20);
 
-	// Toto.beRepaired(100);
+	Toto.beRepaired(100);
 
-	// ScavTrap test;
+	ScavTrap test;
 
-	// ScavTrap toto("TOTO");
+	ScavTrap toto("TOTO");
 
-	// ScavTrap zozo("SCAVV");
+	ScavTrap zozo = toto;
 	
-	ScavTrap scav("zozo");
+	ScavTrap scav(zozo);
 	
 	scav.attack("Aba");
 
-	// scav.guardGate();
+	scav.guardGate();
 
-	scav.takeDamage(5);
+	scav.takeDamage(500);
 
-	// scav.beRepaired(10);
+	scav.beRepaired(10);
 
-	// scav.takeDamage(200);
+	scav.takeDamage(200);
 
-	// scav.beRepaired(100);
+	scav.beRepaired(100);
 }

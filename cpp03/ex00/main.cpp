@@ -19,7 +19,6 @@ int main()
 	ClapTrap Tata(Albert);
 
 	ClapTrap Toto;
-	
 	Toto=Tata;
 
 	Toto.attack("Bernard");

@@ -71,6 +71,5 @@ void DiamondTrap::attack(const std::string& target)
 
 void DiamondTrap::whoAmI()
 {
-	std::cout << "Test1:" <<_name<<std::endl;
-	std::cout << "Test2:" <<ClapTrap::_name << std::endl;	
+	std::cout << "My name is " <<_name<< " and my ClapTrap name is " <<ClapTrap::_name << std::endl;	
 }
