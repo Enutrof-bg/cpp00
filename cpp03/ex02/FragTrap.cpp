@@ -26,7 +26,7 @@ FragTrap::FragTrap(std::string name) : ClapTrap(name)
 	// setHitPoints(100);
 	// setEnergyPoints(50);
 	// setAttackDamage(20);
-	_name = name;
+	// _name = name;
 	_hitPoints = 100;
 	_energyPoints = 100;
 	_attackDamage = 30;
@@ -58,5 +58,5 @@ FragTrap::~FragTrap()
 
 void FragTrap::highFivesGuys(void)
 {
-	std::cout << "High fives" << std::endl;
+	std::cout << "High fives ?" << std::endl;
 }

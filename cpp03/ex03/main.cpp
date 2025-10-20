@@ -35,9 +35,9 @@ int main()
 
 	// Toto.beRepaired(100);
 
-	ScavTrap zozo("SCAVV");
+	// ScavTrap zozo("SCAVV");
 	
-	ScavTrap scav(zozo);
+	// ScavTrap scav(zozo);
 	
 	// scav.attack("Aba");
 
@@ -50,4 +50,10 @@ int main()
 	// scav.takeDamage(200);
 
 	// scav.beRepaired(100);
+
+	DiamondTrap diamond("diamond");
+
+	diamond.attack("abc");
+
+	diamond.whoAmI();
 }

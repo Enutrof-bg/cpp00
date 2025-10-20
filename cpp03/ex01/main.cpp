@@ -33,19 +33,19 @@ int main()
 
 	// Toto.beRepaired(100);
 
-	ScavTrap test;
+	// ScavTrap test;
 
-	ScavTrap toto("TOTO");
+	// ScavTrap toto("TOTO");
 
 	// ScavTrap zozo("SCAVV");
 	
-	// ScavTrap scav(zozo);
+	ScavTrap scav("zozo");
 	
-	// scav.attack("Aba");
+	scav.attack("Aba");
 
 	// scav.guardGate();
 
-	// scav.takeDamage(5);
+	scav.takeDamage(5);
 
 	// scav.beRepaired(10);
 
