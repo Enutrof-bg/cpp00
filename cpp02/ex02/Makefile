@@ -34,7 +34,5 @@ clean:
 fclean:clean
 	rm -f fixed
 
-re:fclean
-	make
-
+re:fclean all
 

@@ -61,7 +61,6 @@ void Fixed::setRawBits(int const raw)
 	_fixed = raw;
 }
 
-
 float Fixed::toFloat(void) const
 {
 	return ((float)_fixed / (float)(1 << _bits));
