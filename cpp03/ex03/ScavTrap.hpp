@@ -31,7 +31,7 @@ public:
 	ScavTrap(std::string name);
 	ScavTrap(const ScavTrap &copy);
 	ScavTrap &operator=(const ScavTrap &other);
-	~ScavTrap();
+	virtual ~ScavTrap();
 
 	void attack(const std::string& target);
 	void guardGate();

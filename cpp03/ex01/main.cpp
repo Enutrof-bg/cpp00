@@ -16,40 +16,27 @@
 int main()
 {
 	ClapTrap Albert("Albert");
-
 	ClapTrap Tata(Albert);
-
 	ClapTrap Toto;
-	
 	Toto=Tata;
-
 	Toto.attack("Bernard");
-
 	Toto.takeDamage(5);
-
 	Toto.beRepaired(10);
-
 	Toto.takeDamage(20);
-
 	Toto.beRepaired(100);
 
 	ScavTrap test;
-
 	ScavTrap toto("TOTO");
-
 	ScavTrap zozo = toto;
-	
-	ScavTrap scav;
-	
+	ScavTrap scav = zozo;
 	scav.attack("Aba");
-
 	scav.guardGate();
-
 	scav.takeDamage(500);
-
 	scav.beRepaired(10);
-
 	scav.takeDamage(200);
-
 	scav.beRepaired(100);
+
+	// ScavTrap *d = new ScavTrap();
+	// ClapTrap *b = d;
+	// delete b;
 }

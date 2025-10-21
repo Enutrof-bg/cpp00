@@ -24,7 +24,6 @@ private:
 	// int _hitPoints;
 	// int _energyPoints;
 	// int _attackDamage;
-	// ClapTrap::ClapTrap;
 
 public:
 	ScavTrap();

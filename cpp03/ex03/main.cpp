@@ -18,43 +18,30 @@
 int main()
 {
 	// ClapTrap Albert("Albert");
-
 	// ClapTrap Tata(Albert);
-
 	// ClapTrap Toto;
-	
 	// Toto=Tata;
-
 	// Toto.attack("Bernard");
-
 	// Toto.takeDamage(5);
-
 	// Toto.beRepaired(10);
-
 	// Toto.takeDamage(20);
-
 	// Toto.beRepaired(100);
 
 	// ScavTrap zozo("SCAVV");
-	
 	// ScavTrap scav(zozo);
-	
 	// scav.attack("Aba");
-
 	// scav.guardGate();
-
 	// scav.takeDamage(5);
-
 	// scav.beRepaired(10);
-
 	// scav.takeDamage(200);
-
 	// scav.beRepaired(100);
+
 	DiamondTrap test;
+	// DiamondTrap diamond("test");
+	// diamond.attack("abc");
+	// diamond.whoAmI();
 
-	DiamondTrap diamond(test);
-
-	diamond.attack("abc");
-
-	diamond.whoAmI();
+	// DiamondTrap *d = new DiamondTrap();
+	// ClapTrap *b = d;
+	// delete b;
 }

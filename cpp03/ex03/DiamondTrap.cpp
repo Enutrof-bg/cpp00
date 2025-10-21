@@ -24,20 +24,26 @@ DiamondTrap::DiamondTrap() : ClapTrap("_clap_name")
 	std::cout << "diamond hp" << _hitPoints << std::endl;
 	std::cout << "diamond ep" << _energyPoints << std::endl;
 	std::cout << "diamond ad" << _attackDamage << std::endl;
+
+	std::cout << "frag hp" << FragTrap::_hitPoints << std::endl;
+	std::cout << "frag ep" <<  FragTrap::_energyPoints << std::endl;
+	std::cout << "frag ad" << FragTrap::_attackDamage << std::endl;
+	std::cout << "scav hp" << ScavTrap::_hitPoints << std::endl;
+	std::cout << "scav ep" <<  ScavTrap::_energyPoints << std::endl;
+	std::cout << "scav ad" << ScavTrap::_attackDamage << std::endl;
 }
 
-DiamondTrap::DiamondTrap(std::string name):ClapTrap(name + "_clap_name")
+DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name")
 {
 	std::cout << "DiamondTrap Default constructor called" << std::endl;
-	_name = name;
-	_hitPoints = FragTrap::_hitPoints;
-	_energyPoints = ScavTrap::_energyPoints;
-	_attackDamage = FragTrap::_attackDamage;
+	this->_name = name;
+	this->_hitPoints = FragTrap::_hitPoints;
+	this->_energyPoints = ScavTrap::_energyPoints;
+	this->_attackDamage = FragTrap::_attackDamage;
 
 	std::cout << "diamond hp" << _hitPoints << std::endl;
 	std::cout << "diamond ep" << _energyPoints << std::endl;
 	std::cout << "diamond ad" << _attackDamage << std::endl;
-
 }
 
 DiamondTrap::~DiamondTrap()
@@ -75,7 +81,6 @@ void DiamondTrap::attack(const std::string& target)
 		std::cout << "DiamondTrap "<< _name << " attacks " << target << ", causing " << _attackDamage << " points of damage!"<<std::endl;
 		_energyPoints--;
 	}
-
 }
 
 void DiamondTrap::whoAmI()

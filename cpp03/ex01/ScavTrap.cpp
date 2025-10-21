@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
-#include "ClapTrap.hpp"
 
 ScavTrap::ScavTrap() : ClapTrap()
 {

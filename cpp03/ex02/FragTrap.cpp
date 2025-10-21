@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
-#include "ClapTrap.hpp"
 
 FragTrap::FragTrap() : ClapTrap()
 {
