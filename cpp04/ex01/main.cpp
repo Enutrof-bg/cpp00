@@ -1,0 +1,79 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kevwang <kevwang@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/16 16:08:23 by kevwang           #+#    #+#             */
+/*   Updated: 2025/10/16 16:08:24 by kevwang          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "Animal.hpp"
+#include "Cat.hpp"
+#include "Dog.hpp"
+#include "WrongAnimal.hpp"
+#include "WrongCat.hpp"
+
+int main()
+{
+	// Animal animal;
+	// Cat cat;
+	// Dog dog;
+	// cat.makeSound();
+	// dog.makeSound();
+
+	// const Animal* meta = new Animal();
+	// const Animal* j = new Dog();
+	// const Animal* i = new Cat();
+	// std::cout << j->getType() << " " << std::endl;
+	// std::cout << i->getType() << " " << std::endl;
+	// i->makeSound(); //will output the cat sound!
+	// j->makeSound();
+	// meta->makeSound();
+
+	// std::cout << std::endl;
+
+	// const WrongAnimal* wrongmeta = new WrongAnimal();
+	// const WrongAnimal* wc = new WrongCat();
+	// std::cout << wrongmeta->getType() << " " << std::endl;
+	// std::cout << wc->getType() << " " << std::endl;
+	// wc->makeSound();
+	// wrongmeta->makeSound();
+
+	// delete wrongmeta;
+	// delete wc;
+	// delete meta;
+	// delete j;
+	// delete i;
+
+	int size = 100;
+	Animal** anim = new Animal*[size];
+
+	for(int i = 0; i < size; i++)
+	{
+		if (i < (size/2))
+		{
+			// const Animal* dog = new Dog();
+			anim[i] = new Dog();
+		}
+		else
+		{
+			// const Animal* cat = new Cat();
+			anim[i] = new Cat();
+		}
+	}
+
+	for(int x = 0; x < size; x++)
+	{
+		anim[x]->makeSound();
+	}
+
+	for(int j = 0; j < size; j++)
+	{
+		delete anim[j];
+	}
+	delete [] anim;
+
+}
