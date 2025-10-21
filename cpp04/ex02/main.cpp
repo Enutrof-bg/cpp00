@@ -18,31 +18,9 @@
 
 int main()
 {
-	int size = 100;
-	Animal** anim = new Animal*[size];
-
-	for(int i = 0; i < size; i++)
-	{
-		if (i < (size/2))
-		{
-			// const Animal* dog = new Dog();
-			anim[i] = new Dog();
-		}
-		else
-		{
-			// const Animal* cat = new Cat();
-			anim[i] = new Cat();
-		}
-	}
-
-	for(int x = 0; x < size; x++)
-	{
-		anim[x]->makeSound();
-	}
-
-	for(int j = 0; j < size; j++)
-	{
-		delete anim[j];
-	}
-	delete [] anim;
+	// Animal animal;
+	Cat cat;
+	Dog dog;
+	cat.makeSound();
+	dog.makeSound();
 }
