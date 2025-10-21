@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kevwang <kevwang@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/16 16:09:53 by kevwang           #+#    #+#             */
-/*   Updated: 2025/10/16 16:09:54 by kevwang          ###   ########.fr       */
+/*   Created: 2025/10/21 16:59:59 by kevwang           #+#    #+#             */
+/*   Updated: 2025/10/21 17:00:00 by kevwang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,17 @@
 #include <iostream>
 #include <string>
 #include <stdio.h>
-#include "Animal.hpp"
+#include "WrongAnimal.hpp"
 
-class Dog : public Animal
+class WrongCat : public WrongAnimal
 {
 public:
-	Dog();
-	Dog(std::string type);
-	Dog(const Dog &copy);
-	Dog &operator=(const Dog &other);
-	~Dog();
+	WrongCat();
+	WrongCat(std::string type);
+	WrongCat(const WrongCat &copy);
+	WrongCat &operator=(const WrongCat &other);
+	~WrongCat();
 
 	void makeSound() const;
+
 };

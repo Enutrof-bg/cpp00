@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kevwang <kevwang@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/16 16:09:53 by kevwang           #+#    #+#             */
-/*   Updated: 2025/10/16 16:09:54 by kevwang          ###   ########.fr       */
+/*   Created: 2025/10/21 16:59:48 by kevwang           #+#    #+#             */
+/*   Updated: 2025/10/21 16:59:49 by kevwang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,21 @@
 #include <iostream>
 #include <string>
 #include <stdio.h>
-#include "Animal.hpp"
 
-class Dog : public Animal
+class WrongAnimal
 {
+protected:
+	std::string type;
+
 public:
-	Dog();
-	Dog(std::string type);
-	Dog(const Dog &copy);
-	Dog &operator=(const Dog &other);
-	~Dog();
+	WrongAnimal();
+	WrongAnimal(std::string type);
+	WrongAnimal(const WrongAnimal &copy);
+	WrongAnimal &operator=(const WrongAnimal &other);
+	virtual ~WrongAnimal();
+
+	std::string getType() const;
 
 	void makeSound() const;
 };
+

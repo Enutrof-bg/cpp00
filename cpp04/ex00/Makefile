@@ -14,7 +14,7 @@ CXX = c++
 
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-FILE = main.cpp Animal.cpp Dog.cpp Cat.cpp
+FILE = main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp
 
 NAME = animal
 
@@ -29,7 +29,7 @@ ${NAME}: ${SRC}
 	${CXX} ${CXXFLAGS} -c $^
 
 clean: 
-	rm -f main.o Animal.o Dog.o Cat.o
+	rm -f main.o Animal.o Dog.o Cat.o WrongAnimal.o WrongCat.o
 
 fclean:clean
 	rm -f animal

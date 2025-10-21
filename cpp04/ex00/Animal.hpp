@@ -22,5 +22,13 @@ protected:
 	std::string type;
 
 public:
-	void makeSound();
+	Animal();
+	Animal(std::string type);
+	Animal(const Animal &copy);
+	Animal &operator=(const Animal &other);
+	virtual ~Animal();
+
+	std::string getType() const;
+
+	virtual void makeSound() const;
 };

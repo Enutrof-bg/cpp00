@@ -1,38 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kevwang <kevwang@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/16 16:09:34 by kevwang           #+#    #+#             */
-/*   Updated: 2025/10/16 16:09:35 by kevwang          ###   ########.fr       */
+/*   Created: 2025/10/21 16:59:55 by kevwang           #+#    #+#             */
+/*   Updated: 2025/10/21 16:59:56 by kevwang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cat.hpp"
+#include "WrongCat.hpp"
 
-Cat::Cat()
+WrongCat::WrongCat()
 {
-	std::cout << "Cat Default Constructor" << std::endl;
-	this->type = "Cat";
+	std::cout << "WrongCat Default Constructor" << std::endl;
+	this->type = "WrongCat";
 }
 
-Cat::Cat(std::string type)
+WrongCat::WrongCat(std::string type)
 {
-	std::cout << "Cat Default Constructor" << std::endl;
+	std::cout << "WrongCat Default Constructor" << std::endl;
 	this->type = type;
 }
 
-Cat::Cat(const Cat &copy)
+WrongCat::WrongCat(const WrongCat &copy)
 {
-	std::cout << "Cat Copy constructor" << std::endl;
+	std::cout << "WrongCat Copy constructor" << std::endl;
 	*this = copy;
 }
 
-Cat &Cat::operator=(const Cat &other)
+WrongCat &WrongCat::operator=(const WrongCat &other)
 {
-	std::cout << "Cat Copy assignment operator" << std::endl;
+	std::cout << "WrongCat Copy assignment operator" << std::endl;
 	if (this != &other)
 	{
 		this->type = other.type;
@@ -40,12 +40,12 @@ Cat &Cat::operator=(const Cat &other)
 	return *this;
 }
 
-Cat::~Cat()
+WrongCat::~WrongCat()
 {
-	std::cout << "Cat Destructor" << std::endl;
+	std::cout << "WrongCat Destructor" << std::endl;
 }
 
-void Cat::makeSound() const
+void WrongCat::makeSound() const
 {
 	std::cout << "Meowww" << std::endl;
 }
