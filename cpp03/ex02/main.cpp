@@ -17,39 +17,28 @@
 int main()
 {
 	// ClapTrap Albert("Albert");
-
 	// ClapTrap Tata(Albert);
-
 	// ClapTrap Toto;
-	
 	// Toto=Tata;
-
 	// Toto.attack("Bernard");
-
 	// Toto.takeDamage(5);
-
 	// Toto.beRepaired(10);
-
 	// Toto.takeDamage(20);
-
 	// Toto.beRepaired(100);
 
-	FragTrap test;
-
 	FragTrap toto("TOTO");
-
+	// FragTrap test1("test");
 	FragTrap zozo = toto;
-	
 	FragTrap scav(zozo);
-	
 	scav.attack("Aba");
-
 	scav.takeDamage(5);
-
 	scav.beRepaired(10);
-
 	scav.takeDamage(200);
-
 	scav.beRepaired(100);
+	scav.highFivesGuys();
 
+
+	// FragTrap *d = new FragTrap();
+	// ClapTrap *b = d;
+	// delete b;
 }
