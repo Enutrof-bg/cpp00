@@ -36,10 +36,10 @@ int main()
 	// scav.takeDamage(200);
 	// scav.beRepaired(100);
 
-	DiamondTrap test;
-	// DiamondTrap diamond("test");
-	// diamond.attack("abc");
-	// diamond.whoAmI();
+	// DiamondTrap test;
+	DiamondTrap diamond("test");
+	diamond.attack("abc");
+	diamond.whoAmI();
 
 	// DiamondTrap *d = new DiamondTrap();
 	// ClapTrap *b = d;

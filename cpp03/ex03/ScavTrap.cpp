@@ -14,37 +14,29 @@
 
 ScavTrap::ScavTrap() : ClapTrap()
 {
-	std::cout << "ScavTrap Derived constructor called" << std::endl;
+	std::cout << "ScavTrap Derived constructor "<< _name<<" called" << std::endl;
 	_hitPoints = 100;
 	_energyPoints = 50;
 	_attackDamage = 20;
-
-	std::cout << "scav hp" << _hitPoints << std::endl;
-	std::cout << "scav ep" << _energyPoints << std::endl;
-	std::cout << "scav ad" << _attackDamage << std::endl;
 }
 
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 {
-	std::cout << "ScavTrap Derived constructor called" << std::endl;
+	std::cout << "ScavTrap Derived constructor "<< _name<<" called" << std::endl;
 	_hitPoints = 100;
 	_energyPoints = 50;
 	_attackDamage = 20;
-
-	std::cout << "scav hp" << _hitPoints << std::endl;
-	std::cout << "scav ep" << _energyPoints << std::endl;
-	std::cout << "scav ad" << _attackDamage << std::endl;
 }
 
-ScavTrap::ScavTrap(const ScavTrap &copy): ClapTrap(copy)
+ScavTrap::ScavTrap(const ScavTrap &copy): ClapTrap(copy._name)
 {
-	std::cout << "ScavTrap Derived copy constructor called" << std::endl;
+	std::cout << "ScavTrap Derived copy constructor "<< _name<<" called" << std::endl;
 	*this = copy;
 }
 
 ScavTrap &ScavTrap::operator=(const ScavTrap &other)
 {
-	std::cout << "ScavTrap Copy assignment operator called" << std::endl;
+	std::cout << "ScavTrap Copy assignment operator "<< _name<<" called" << std::endl;
 	if (this != &other)
 	{
 		_name = other._name;
@@ -57,7 +49,7 @@ ScavTrap &ScavTrap::operator=(const ScavTrap &other)
 
 ScavTrap::~ScavTrap()
 {
-	std::cout << "ScavTrap Derived destructor called" << std::endl;
+	std::cout << "ScavTrap Derived destructor "<< _name<<" called" << std::endl;
 }
 
 void ScavTrap::attack(const std::string& target)

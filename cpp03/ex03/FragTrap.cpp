@@ -14,37 +14,29 @@
 
 FragTrap::FragTrap() : ClapTrap()
 {
-	std::cout << "FragTrap Derived constructor called" << std::endl;
+	std::cout << "FragTrap Derived constructor "<< _name<<" called" << std::endl;
 	_hitPoints = 100;
 	_energyPoints = 100;
 	_attackDamage = 30;
-
-	std::cout << "frag hp" << _hitPoints << std::endl;
-	std::cout << "frag ep" << _energyPoints << std::endl;
-	std::cout << "frag ad" << _attackDamage << std::endl;
 }
 
 FragTrap::FragTrap(std::string name) : ClapTrap(name)
 {
-	std::cout << "FragTrap Derived constructor called" << std::endl;
+	std::cout << "FragTrap Derived constructor "<< _name<<" called" << std::endl;
 	_hitPoints = 100;
 	_energyPoints = 100;
 	_attackDamage = 30;
-
-	std::cout << "frag hp" << _hitPoints << std::endl;
-	std::cout << "frag ep" << _energyPoints << std::endl;
-	std::cout << "frag ad" << _attackDamage << std::endl;
 }
 
-FragTrap::FragTrap(const FragTrap &copy): ClapTrap(copy)
+FragTrap::FragTrap(const FragTrap &copy): ClapTrap(copy._name)
 {
-	std::cout << "FragTrap Derived copy constructor called" << std::endl;
+	std::cout << "FragTrap Derived copy constructor "<< _name<<" called" << std::endl;
 	*this = copy;
 }
 
 FragTrap &FragTrap::operator=(const FragTrap &other)
 {
-	std::cout << "FragTrap Copy assignment operator called" << std::endl;
+	std::cout << "FragTrap Copy assignment operator "<< _name<<" called" << std::endl;
 	if (this != &other)
 	{
 		_name = other._name;
@@ -57,7 +49,7 @@ FragTrap &FragTrap::operator=(const FragTrap &other)
 
 FragTrap::~FragTrap()
 {
-	std::cout << "FragTrap Derived destructor called" << std::endl;
+	std::cout << "FragTrap Derived destructor "<< _name<<" called" << std::endl;
 }
 
 void FragTrap::highFivesGuys(void)
