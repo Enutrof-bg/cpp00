@@ -28,7 +28,7 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 	_attackDamage = 20;
 }
 
-ScavTrap::ScavTrap(const ScavTrap &copy): ClapTrap(copy)
+ScavTrap::ScavTrap(const ScavTrap &copy): ClapTrap(copy._name)
 {
 	std::cout << "ScavTrap Derived copy constructor "<< _name<<" called" << std::endl;
 	*this = copy;

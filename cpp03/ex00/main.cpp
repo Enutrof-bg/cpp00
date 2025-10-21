@@ -15,19 +15,14 @@
 int main()
 {
 	ClapTrap Albert("Albert");
-
 	ClapTrap Tata(Albert);
-
 	ClapTrap Toto;
 	Toto=Tata;
 
 	Toto.attack("Bernard");
-
 	Toto.takeDamage(5);
-
 	Toto.beRepaired(10);
-
 	Toto.takeDamage(20);
-
 	Toto.beRepaired(100);
+
 }

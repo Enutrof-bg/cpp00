@@ -28,7 +28,7 @@ FragTrap::FragTrap(std::string name) : ClapTrap(name)
 	_attackDamage = 30;
 }
 
-FragTrap::FragTrap(const FragTrap &copy): ClapTrap(copy)
+FragTrap::FragTrap(const FragTrap &copy): ClapTrap(copy._name)
 {
 	std::cout << "FragTrap Derived copy constructor "<< _name<<" called" << std::endl;
 	*this = copy;

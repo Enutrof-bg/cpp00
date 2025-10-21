@@ -26,13 +26,13 @@ ClapTrap::ClapTrap(std::string name)
 
 ClapTrap::ClapTrap(const ClapTrap &copy)
 {
-	std::cout << "ClapTrap Copy constructor "<< _name<<" called" << std::endl;
+	std::cout << "ClapTrap Copy constructor "<< copy._name<<" called" << std::endl;
 	*this = copy;
 }
 
 ClapTrap &ClapTrap::operator=(const ClapTrap &other)
 {
-	std::cout << "ClapTrap Copy assignment operator "<< _name<<" called" << std::endl;
+	std::cout << "ClapTrap Copy assignment operator "<< other._name<<" called" << std::endl;
 	if (this != &other)
 	{
 		_name = other._name;
