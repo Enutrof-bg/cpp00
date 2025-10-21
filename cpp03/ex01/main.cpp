@@ -28,18 +28,18 @@ int main()
 	ScavTrap a1("TOTO");
 	ScavTrap b1(a1);
 
-	b1.attack("test");
+	// b1.attack("test");
 
-	ClapTrap test = a1;
-	test.attack("as");
+	// ClapTrap test = a1;
+	// test.attack("as");
 
-	// ScavTrap scav = b1;
-	// scav.attack("Aba");
-	// scav.guardGate();
-	// scav.takeDamage(500);
-	// scav.beRepaired(10);
-	// scav.takeDamage(200);
-	// scav.beRepaired(100);
+	ScavTrap scav = b1;
+	scav.attack("Aba");
+	scav.guardGate();
+	scav.takeDamage(500);
+	scav.beRepaired(10);
+	scav.takeDamage(200);
+	scav.beRepaired(100);
 
 	// ScavTrap *d = new ScavTrap();
 	// ClapTrap *b = d;
