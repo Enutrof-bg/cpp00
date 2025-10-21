@@ -20,6 +20,11 @@ int main()
 	Toto=Tata;
 
 	Toto.attack("Bernard");
+	Toto.attack("Bernard");
+	Toto.attack("Bernard");
+	Toto.attack("Bernard");
+	Toto.attack("Bernard");
+	
 	Toto.takeDamage(5);
 	Toto.beRepaired(10);
 	Toto.takeDamage(20);
