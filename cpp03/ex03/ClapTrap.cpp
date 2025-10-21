@@ -90,23 +90,3 @@ void ClapTrap::beRepaired(unsigned int amount)
 		_energyPoints--;
 	}
 }
-
-void ClapTrap::setName(std::string name)
-{
-	_name = name;
-}
-
-void ClapTrap::setHitPoints(int amount)
-{
-	_hitPoints = amount;
-}
-
-void ClapTrap::setEnergyPoints(int amount)
-{
-	_energyPoints = amount;
-}
-
-void ClapTrap::setAttackDamage(int amount)
-{
- 	_attackDamage = amount;
-}
