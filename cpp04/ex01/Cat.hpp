@@ -25,7 +25,6 @@ private:
 	Brain *brain;
 public:
 	Cat();
-	Cat(std::string type);
 	Cat(const Cat &copy);
 	Cat &operator=(const Cat &other);
 	~Cat();

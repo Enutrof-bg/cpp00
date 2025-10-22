@@ -25,7 +25,6 @@ private:
 	Brain *brain;
 public:
 	Dog();
-	Dog(std::string type);
 	Dog(const Dog &copy);
 	Dog &operator=(const Dog &other);
 	~Dog();

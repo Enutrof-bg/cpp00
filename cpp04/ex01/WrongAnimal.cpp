@@ -18,12 +18,6 @@ WrongAnimal::WrongAnimal()
 	this->type = "Default";
 }
 
-WrongAnimal::WrongAnimal(std::string type)
-{
-	std::cout << "WrongAnimal Default Constructor" << std::endl;
-	this->type = type;
-}
-
 WrongAnimal::WrongAnimal(const WrongAnimal &copy)
 {
 	std::cout << "WrongAnimal Copy constructor" << std::endl;

@@ -18,12 +18,6 @@ Brain::Brain()
 	// this->ideas";
 }
 
-// Brain::Brain(std::string type)
-// {
-// 	std::cout << "Brain Default Constructor" << std::endl;
-// 	this->type = type;
-// }
-
 Brain::Brain(const Brain &copy)
 {
 	std::cout << "Brain Copy constructor" << std::endl;
