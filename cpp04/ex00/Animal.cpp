@@ -18,12 +18,6 @@ Animal::Animal()
 	this->type = "Default";
 }
 
-Animal::Animal(std::string type)
-{
-	std::cout << "Animal Default Constructor" << std::endl;
-	this->type = type;
-}
-
 Animal::Animal(const Animal &copy)
 {
 	std::cout << "Animal Copy constructor" << std::endl;

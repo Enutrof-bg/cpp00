@@ -18,12 +18,6 @@ WrongCat::WrongCat()
 	this->type = "WrongCat";
 }
 
-WrongCat::WrongCat(std::string type)
-{
-	std::cout << "WrongCat Default Constructor" << std::endl;
-	this->type = type;
-}
-
 WrongCat::WrongCat(const WrongCat &copy)
 {
 	std::cout << "WrongCat Copy constructor" << std::endl;

@@ -16,23 +16,17 @@
 #include "WrongAnimal.hpp"
 #include "WrongCat.hpp"
 
-int main()
+void test_1(void)
 {
-	int size = 100;
+	int size = 10;
 	Animal** anim = new Animal*[size];
 
 	for(int i = 0; i < size; i++)
 	{
 		if (i < (size/2))
-		{
-			// const Animal* dog = new Dog();
 			anim[i] = new Dog();
-		}
 		else
-		{
-			// const Animal* cat = new Cat();
 			anim[i] = new Cat();
-		}
 	}
 
 	for(int x = 0; x < size; x++)
@@ -45,4 +39,43 @@ int main()
 		delete anim[j];
 	}
 	delete [] anim;
+}
+
+//object slicing
+//makeSound va appeler Animal::makeSound
+void test_2(void)
+{
+	int size = 10;
+	Animal* anim = new Animal[size];
+
+	for(int i = 0; i < size; i++)
+	{
+		if (i < (size/2))
+			anim[i] = Dog();
+		else
+			anim[i] = Cat();
+	}
+
+	for(int x = 0; x < size; x++)
+	{
+		anim[x].makeSound();
+	}
+	delete [] anim;
+}
+
+int main()
+{
+	test_1();
+
+	// test_2();
+
+	// Brain brain;
+	// brain[0] = "00";
+	// brain[1] = "10";
+
+	// Dog dog1;
+
+	// Dog dog2;
+
+	// dog1.brain[0] = "00"
 }

@@ -18,11 +18,13 @@
 
 int main()
 {
-	// Animal animal;
-	// Cat cat;
-	// Dog dog;
-	// cat.makeSound();
-	// dog.makeSound();
+	Animal animal;
+	Cat cat;
+	Dog dog;
+	cat.makeSound();
+	dog.makeSound();
+
+	std::cout << std::endl;
 
 	const Animal* meta = new Animal();
 	const Animal* j = new Dog();
@@ -32,7 +34,9 @@ int main()
 	i->makeSound(); //will output the cat sound!
 	j->makeSound();
 	meta->makeSound();
-
+	delete meta;
+	delete j;
+	delete i;
 
 	std::cout << std::endl;
 
@@ -42,11 +46,20 @@ int main()
 	std::cout << wc->getType() << " " << std::endl;
 	wc->makeSound();
 	wrongmeta->makeSound();
-
 	delete wrongmeta;
 	delete wc;
-	delete meta;
-	delete j;
-	delete i;
+
+	std::cout << std::endl;
+
+	Animal *a;
+	Dog d;
+	a = &d;
+	a->makeSound();
+
+	std::cout << std::endl;
+
+	Animal *test = new Dog;
+	test->makeSound();
+	delete test;
 
 }

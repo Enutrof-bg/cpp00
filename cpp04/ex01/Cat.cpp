@@ -31,6 +31,7 @@ Cat &Cat::operator=(const Cat &other)
 	if (this != &other)
 	{
 		this->type = other.type;
+		this->brain = other.brain;
 	}
 	return *this;
 }

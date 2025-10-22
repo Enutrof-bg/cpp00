@@ -18,12 +18,6 @@ Dog::Dog()
 	this->type = "Dog";
 }
 
-Dog::Dog(std::string type)
-{
-	std::cout << "Dog Default Constructor" << std::endl;
-	this->type = type;
-}
-
 Dog::Dog(const Dog &copy)
 {
 	std::cout << "Dog Copy constructor" << std::endl;

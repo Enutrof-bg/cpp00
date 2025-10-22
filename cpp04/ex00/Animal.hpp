@@ -23,7 +23,6 @@ protected:
 
 public:
 	Animal();
-	Animal(std::string type);
 	Animal(const Animal &copy);
 	Animal &operator=(const Animal &other);
 	virtual ~Animal();

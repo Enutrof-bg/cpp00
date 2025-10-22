@@ -18,12 +18,6 @@ Cat::Cat()
 	this->type = "Cat";
 }
 
-Cat::Cat(std::string type)
-{
-	std::cout << "Cat Default Constructor" << std::endl;
-	this->type = type;
-}
-
 Cat::Cat(const Cat &copy)
 {
 	std::cout << "Cat Copy constructor" << std::endl;
