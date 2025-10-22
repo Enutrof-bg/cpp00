@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "Dog.hpp"
-#include "Brain.hpp"
 
 Dog::Dog()
 {
@@ -32,7 +31,9 @@ Dog &Dog::operator=(const Dog &other)
 	if (this != &other)
 	{
 		this->type = other.type;
-		this->brain = other.brain;
+		if (this->brain)
+			delete this->brain;
+		this->brain = new Brain(*other.getBrain());
 	}
 	return *this;
 }
@@ -46,4 +47,14 @@ Dog::~Dog()
 void Dog::makeSound() const
 {
 	std::cout << "Wouf" << std::endl;
+}
+
+Brain* Dog::getBrain()
+{
+	return (brain);
+}
+
+Brain* Dog::getBrain() const
+{
+	return (brain);
 }

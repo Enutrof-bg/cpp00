@@ -39,3 +39,16 @@ Brain::~Brain()
 {
 	std::cout << "Brain Destructor" << std::endl;
 }
+
+std::string	Brain::getIdeas(int index)
+{
+	if (index >=0 && index < 100)
+		return (ideas[index]);
+	return ("Wrong index");
+}
+
+void Brain::setIdeas(std::string newIdea, int index)
+{
+	if (index >=0 && index < 100)
+		ideas[index] = newIdea;
+}
