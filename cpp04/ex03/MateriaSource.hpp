@@ -12,9 +12,13 @@
 
 #pragma once
 
-#include "main.hpp"
+#include <iostream>
+#include <string>
+#include <stdio.h>
+// #include "main.hpp"
+// #include "AMateria.hpp"
 
-class IMateriaSource
+class IMateriaSource : public IMateriaSource
 {
 public:
 	virtual ~IMateriaSource() {}
