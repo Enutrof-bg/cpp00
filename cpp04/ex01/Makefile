@@ -34,8 +34,7 @@ clean:
 fclean:clean
 	rm -f animal
 
-re:fclean
-	make
+re:fclean all
 
 
 
