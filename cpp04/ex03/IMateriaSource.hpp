@@ -1,36 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   IMateriaSource.hpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kevwang <kevwang@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/22 13:34:12 by kevwang           #+#    #+#             */
-/*   Updated: 2025/10/22 13:34:14 by kevwang          ###   ########.fr       */
+/*   Created: 2025/10/22 16:59:01 by kevwang           #+#    #+#             */
+/*   Updated: 2025/10/22 16:59:02 by kevwang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "main.hpp"
+#pragma once
 
-int main()
+#include <iostream>
+#include <string>
+#include <stdio.h>
+// #include "main.hpp"
+// #include "AMateria.hpp"
+
+class IMateriaSource
 {
-	std::cout << "test" << std::endl;
-
-	// AMateria materia("materiel");
-	// std::cout << materia.getType() << std::endl;
-
-	
-	Character p1("Albert");
-
-	Cure heal1;
-	Cure* heal2 = heal1.clone();
-
-	heal1.use(p1);
-	heal2->use(p1);
-
-	Ice shoot1;
-	Ice* shoot2 = shoot1.clone();
-
-	shoot1.use(p1);
-	shoot2->use(p1);
-}
+public:
+	virtual ~IMateriaSource() {}
+	virtual void learnMateria(AMateria*) = 0;
+	virtual AMateria* createMateria(std::string const & type) = 0;
+};

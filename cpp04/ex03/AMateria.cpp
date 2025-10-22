@@ -26,13 +26,13 @@ AMateria::AMateria(std::string const & type)
 
 AMateria::AMateria(const AMateria &copy)
 {
-	std::cout << "AMateria Copy constructor" << std::endl;
+	std::cout << "Materia Copy constructor" << std::endl;
 	*this = copy;
 }
 
 AMateria &AMateria::operator=(AMateria const &other)
 {
-	std::cout << "AMateria Copy assignment operator" << std::endl;
+	std::cout << "Materia Copy assignment operator" << std::endl;
 	if (this != &other)
 	{
 		this->type = other.getType();

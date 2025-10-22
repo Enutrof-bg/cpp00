@@ -39,7 +39,7 @@ Cure::~Cure()
 	std::cout << "Cure Default Destructor" << std::endl;
 }
 
-AMateria* Cure::clone() const
+Cure* Cure::clone() const
 {
 	return new Cure();
 }
@@ -47,6 +47,4 @@ AMateria* Cure::clone() const
 void Cure::use(ICharacter& target)
 {
 	std::cout << "* heals "<< target.getName() << "’s wounds *" << std::endl;
-	// std::cout << "* heals "<< target._name << "’s wounds *" << std::endl;
-	// std::cout << "* heals xxx’s wounds *" << std::endl;
 }

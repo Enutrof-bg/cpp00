@@ -22,6 +22,12 @@ protected:
 	std::string _name;
 
 public:
+	Character();
+	Character(std::string name);
+	Character(const Character &copy);
+	Character &operator=(const Character &other);
+	~Character();
+	
 	std::string const & getName() const;
 	// virtual ~ICharacter() {}
 	// virtual void equip(AMateria* m) = 0;

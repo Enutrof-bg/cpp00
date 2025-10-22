@@ -24,6 +24,6 @@ public:
 	Ice &operator=(const Ice &other);
 	~Ice();
 
-	AMateria* clone() const;
+	Ice* clone() const;
 	void use(ICharacter& target);
 };

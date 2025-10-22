@@ -19,6 +19,7 @@
 #include "Character.hpp"
 #include "Cure.hpp"
 #include "ICharacter.hpp"
+#include "Ice.hpp"
 
 // Forward declarations
 class AMateria;
