@@ -14,7 +14,6 @@
 
 #include <iostream>
 #include <string>
-#include <stdio.h>
 #include "WrongAnimal.hpp"
 
 class WrongCat : public WrongAnimal

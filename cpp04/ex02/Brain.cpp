@@ -15,14 +15,7 @@
 Brain::Brain()
 {
 	std::cout << "Brain Default Constructor" << std::endl;
-	// this->ideas";
 }
-
-// Brain::Brain(std::string type)
-// {
-// 	std::cout << "Brain Default Constructor" << std::endl;
-// 	this->type = type;
-// }
 
 Brain::Brain(const Brain &copy)
 {
@@ -35,7 +28,8 @@ Brain &Brain::operator=(const Brain &other)
 	std::cout << "Brain Copy assignment operator" << std::endl;
 	if (this != &other)
 	{
-		// this->ideas = other.ideas;
+		for(int i = 0; i < 100; i++)
+			this->ideas[i] = other.ideas[i];
 	}
 	return *this;
 }

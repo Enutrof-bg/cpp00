@@ -14,7 +14,6 @@
 
 #include <iostream>
 #include <string>
-#include <stdio.h>
 #include "Brain.hpp"
 #include "Animal.hpp"
 
@@ -25,7 +24,6 @@ private:
 	Brain *brain;
 public:
 	Cat();
-	Cat(std::string type);
 	Cat(const Cat &copy);
 	Cat &operator=(const Cat &other);
 	~Cat();

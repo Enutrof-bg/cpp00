@@ -18,7 +18,7 @@ Ice::Ice()
 	std::cout << "Ice Default Constructor" << std::endl;
 	this->type = "ice";
 }
-Ice::Ice(const Ice &copy)
+Ice::Ice(const Ice &copy) : AMateria(copy)
 {
 	std::cout << "Ice Copy constructor" << std::endl;
 	*this = copy;

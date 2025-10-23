@@ -14,7 +14,6 @@
 
 #include <iostream>
 #include <string>
-#include <stdio.h>
 #include "AMateria.hpp"
 #include "Character.hpp"
 #include "Cure.hpp"

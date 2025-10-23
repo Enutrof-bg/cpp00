@@ -15,7 +15,6 @@
 Brain::Brain()
 {
 	std::cout << "Brain Default Constructor" << std::endl;
-	// this->ideas";
 }
 
 Brain::Brain(const Brain &copy)

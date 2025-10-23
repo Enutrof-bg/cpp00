@@ -14,7 +14,6 @@
 
 #include <iostream>
 #include <string>
-#include <stdio.h>
 #include "IMateriaSource.hpp"
 // #include "main.hpp"
 #include "AMateria.hpp"

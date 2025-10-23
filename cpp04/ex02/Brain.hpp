@@ -14,8 +14,6 @@
 
 #include <iostream>
 #include <string>
-#include <stdio.h>
-#include "Animal.hpp"
 
 class Brain
 {
@@ -23,7 +21,6 @@ protected:
 	std::string ideas[100];
 public:
 	Brain();
-	// Brain(std::string type);
 	Brain(const Brain &copy);
 	Brain &operator=(const Brain &other);
 	~Brain();

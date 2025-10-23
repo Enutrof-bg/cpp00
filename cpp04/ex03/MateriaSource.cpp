@@ -63,23 +63,28 @@ MateriaSource &MateriaSource::operator=(const MateriaSource &other)
 
 void MateriaSource::learnMateria(AMateria* m)
 {
+	if (m == NULL)
+	{
+		std::cout << "Cannot learn NULL materia." << std::endl;
+		return ;
+	}
 	for (int i = 0; i < 4; i++)
 	{
 		if (_spellBook[i] == NULL)
 		{
-			// _spellBook[i] = m->clone();
 			_spellBook[i] = m;
 			std::cout << "Materia learned" << std::endl;
 			return ;
 		}
 	}
+	std::cout << "SpellBook full, cannot learn more materias" << std::endl;
 }
 
 AMateria* MateriaSource::createMateria(std::string const & type)
 {
 	for(int i = 0; i < 4; i++)
 	{
-		if (_spellBook[i]->getType() == type)
+		if (_spellBook[i] && _spellBook[i]->getType() == type)
 		{
 			std::cout << "Materia copied" << std::endl;
 			return (_spellBook[i]->clone());

@@ -14,7 +14,6 @@
 
 #include <iostream>
 #include <string>
-#include <stdio.h>
 #include "Brain.hpp"
 #include "Animal.hpp"
 
@@ -32,5 +31,5 @@ public:
 	void makeSound() const;
 
 	Brain* getBrain();
-	Brain* getBrain() const;
+	const Brain* getBrain() const;
 };

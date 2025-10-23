@@ -19,13 +19,7 @@ Cat::Cat()
 	this->brain = new Brain();
 }
 
-Cat::Cat(std::string type)
-{
-	std::cout << "Cat Default Constructor" << std::endl;
-	this->type = type;
-}
-
-Cat::Cat(const Cat &copy)
+Cat::Cat(const Cat &copy): Animal(copy), brain(NULL)
 {
 	std::cout << "Cat Copy constructor" << std::endl;
 	*this = copy;
@@ -37,6 +31,9 @@ Cat &Cat::operator=(const Cat &other)
 	if (this != &other)
 	{
 		this->type = other.type;
+		if (this->brain)
+			delete this->brain;
+		this->brain = new Brain(*other.brain);
 	}
 	return *this;
 }

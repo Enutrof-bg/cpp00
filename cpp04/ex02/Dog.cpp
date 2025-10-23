@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "Dog.hpp"
-#include "Brain.hpp"
 
 Dog::Dog()
 {
@@ -20,13 +19,7 @@ Dog::Dog()
 	this->brain = new Brain();
 }
 
-Dog::Dog(std::string type)
-{
-	std::cout << "Dog Default Constructor" << std::endl;
-	this->type = type;
-}
-
-Dog::Dog(const Dog &copy)
+Dog::Dog(const Dog &copy) : Animal(copy), brain(NULL)
 {
 	std::cout << "Dog Copy constructor" << std::endl;
 	*this = copy;
@@ -38,6 +31,9 @@ Dog &Dog::operator=(const Dog &other)
 	if (this != &other)
 	{
 		this->type = other.type;
+		if (this->brain)
+			delete this->brain;
+		this->brain = new Brain(*other.brain);
 	}
 	return *this;
 }

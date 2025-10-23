@@ -18,7 +18,7 @@ Cure::Cure()
 	std::cout << "Cure Default Constructor" << std::endl;
 	this->type = "cure";
 }
-Cure::Cure(const Cure &copy)
+Cure::Cure(const Cure &copy) : AMateria(copy)
 {
 	std::cout << "Cure Copy constructor" << std::endl;
 	*this = copy;

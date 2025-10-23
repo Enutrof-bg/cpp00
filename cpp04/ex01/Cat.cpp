@@ -19,7 +19,7 @@ Cat::Cat()
 	this->brain = new Brain();
 }
 
-Cat::Cat(const Cat &copy)
+Cat::Cat(const Cat &copy) : Animal(copy), brain(NULL)
 {
 	std::cout << "Cat Copy constructor" << std::endl;
 	*this = copy;
@@ -54,7 +54,7 @@ Brain* Cat::getBrain()
 	return (brain);
 }
 
-Brain* Cat::getBrain() const
+const Brain* Cat::getBrain() const
 {
 	return (brain);
 }

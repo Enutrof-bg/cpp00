@@ -19,7 +19,7 @@ Dog::Dog()
 	this->brain = new Brain();
 }
 
-Dog::Dog(const Dog &copy)
+Dog::Dog(const Dog &copy) : Animal(copy), brain(NULL)
 {
 	std::cout << "Dog Copy constructor" << std::endl;
 	*this = copy;
@@ -54,7 +54,7 @@ Brain* Dog::getBrain()
 	return (brain);
 }
 
-Brain* Dog::getBrain() const
+const Brain* Dog::getBrain() const
 {
 	return (brain);
 }

@@ -14,7 +14,6 @@
 
 #include <iostream>
 #include <string>
-#include <stdio.h>
 #include "Animal.hpp"
 
 class Cat : public Animal

@@ -85,6 +85,12 @@ std::string const &Character::getName() const
 
 void Character::equip(AMateria* m)
 {
+	if (m == NULL)
+	{
+		std::cout << "Cannot equip NULL materia." << std::endl;
+		return ;
+	}
+
 	for (int i = 0; i < 4; i++)
 	{
 		if (_inventory[i] == NULL)
@@ -99,7 +105,7 @@ void Character::equip(AMateria* m)
 
 void Character::unequip(int idx)
 {
-	if (_inventory[idx] != NULL)
+	if (idx >= 0 && idx < 4 && _inventory[idx] != NULL)
 	{
 		_inventory[idx] = NULL;
 		std::cout << "Materia unequiped at slot " << idx << std::endl;
