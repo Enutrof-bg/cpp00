@@ -15,13 +15,24 @@
 #include <iostream>
 #include <string>
 #include <stdio.h>
+#include "IMateriaSource.hpp"
 // #include "main.hpp"
-// #include "AMateria.hpp"
+#include "AMateria.hpp"
 
-class IMateriaSource : public IMateriaSource
+class AMateria;
+
+class MateriaSource : public IMateriaSource
 {
+protected:
+	AMateria* _spellBook[4];
+	
 public:
-	virtual ~IMateriaSource() {}
-	virtual void learnMateria(AMateria*) = 0;
-	virtual AMateria* createMateria(std::string const & type) = 0;
+	MateriaSource();
+	~MateriaSource();
+	MateriaSource(const MateriaSource &copy);
+	MateriaSource &operator=(const MateriaSource &other);
+
+	// ~IMateriaSource() {}
+	void learnMateria(AMateria* m);
+	AMateria* createMateria(std::string const & type);
 };

@@ -20,6 +20,7 @@
 #include "Cure.hpp"
 #include "ICharacter.hpp"
 #include "Ice.hpp"
+#include "MateriaSource.hpp"
 
 // Forward declarations
 class AMateria;

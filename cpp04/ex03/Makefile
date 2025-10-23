@@ -14,7 +14,7 @@ CXX = c++
 
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-FILE = main.cpp AMateria.cpp Cure.cpp Character.cpp Ice.cpp
+FILE = main.cpp AMateria.cpp Cure.cpp Character.cpp Ice.cpp MateriaSource.cpp
 
 NAME = materia
 
@@ -29,7 +29,7 @@ ${NAME}: ${SRC}
 	${CXX} ${CXXFLAGS} -c $^
 
 clean: 
-	rm -f main.o AMateria.o Cure.o Character.o Ice.o
+	rm -f main.o AMateria.o Cure.o Character.o Ice.o MateriaSource.o
 
 fclean:clean
 	rm -f materia

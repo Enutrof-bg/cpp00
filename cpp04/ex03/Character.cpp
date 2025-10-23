@@ -15,19 +15,49 @@
 Character::Character()
 {
 	std::cout << "Character Default Constructor" << std::endl;
-	_name = "NewPlayer";
+	_name = "Default";
+	for (int i = 0; i < 4; i++)
+	{
+		_inventory[i] = NULL;
+	}
 }
 
 Character::Character(std::string name)
 {
 	std::cout << "Character Default Constructor" << std::endl;
 	_name = name;
+	for (int i = 0; i < 4; i++)
+	{
+		_inventory[i] = NULL;
+	}
 }
 
 Character::Character(const Character &copy)
 {
 	std::cout << "Character Copy constructor" << std::endl;
+	for (int j = 0; j < 4; j++)
+	{
+		_inventory[j] = NULL;
+	}
 	*this = copy;
+	// for (int j = 0; j < 4; j++)
+	// {
+	// 	_inventory[j] = NULL;
+	// }
+	// if (this != &copy)
+	// {
+	// 	this->_name = copy._name;
+	// 	for (int i = 0; i < 4; i++)
+	// 	{
+	// 		if (_inventory[i] != NULL)
+	// 		{
+	// 			delete _inventory[i];
+	// 			_inventory[i] = NULL;
+	// 		}
+	// 		if (copy._inventory[i] != NULL)
+	// 			_inventory[i] = copy._inventory[i]->clone();
+	// 	}
+	// }
 }
 
 Character &Character::operator=(const Character &other)
@@ -36,13 +66,29 @@ Character &Character::operator=(const Character &other)
 	if (this != &other)
 	{
 		this->_name = other._name;
+		for (int i = 0; i < 4; i++)
+		{
+			if (_inventory[i] != NULL)
+			{
+				delete _inventory[i];
+				_inventory[i] = NULL;
+			}
+			if (other._inventory[i] != NULL)
+				_inventory[i] = other._inventory[i]->clone();
+		}
 	}
+	
 	return *this;
 }
 
 Character::~Character()
 {
 	std::cout << "Character Default Destructor" << std::endl;
+	for (int i = 0; i < 4; i++)
+	{
+		if (_inventory[i] != NULL)
+			delete _inventory[i];
+	}
 }
 
 std::string const &Character::getName() const
@@ -54,3 +100,39 @@ std::string const &Character::getName() const
 // {
 
 // }
+
+void Character::equip(AMateria* m)
+{
+	for (int i = 0; i < 4; i++)
+	{
+		if (_inventory[i] == NULL)
+		{
+			_inventory[i] = m;
+			std::cout << "Materia equiped at slot " << i << std::endl;
+			return ;
+		}
+	}
+	std::cout << "Inventory full." << std::endl;
+}
+
+void Character::unequip(int idx)
+{
+	if (_inventory[idx] != NULL)
+	{
+		_inventory[idx] = NULL;
+		std::cout << "Materia unequiped at slot " << idx << std::endl;
+	}
+}
+
+void Character::use(int idx, ICharacter& target)
+{
+	if (idx >= 0 && idx <= 3)
+	{
+		if (_inventory[idx] != NULL)
+			_inventory[idx]->use(target);
+		else
+			std::cout << "* Empty slot *" << std::endl;
+	}
+	else
+		std::cout << "Wrong index" << std::endl;
+}
