@@ -40,24 +40,6 @@ Character::Character(const Character &copy)
 		_inventory[j] = NULL;
 	}
 	*this = copy;
-	// for (int j = 0; j < 4; j++)
-	// {
-	// 	_inventory[j] = NULL;
-	// }
-	// if (this != &copy)
-	// {
-	// 	this->_name = copy._name;
-	// 	for (int i = 0; i < 4; i++)
-	// 	{
-	// 		if (_inventory[i] != NULL)
-	// 		{
-	// 			delete _inventory[i];
-	// 			_inventory[i] = NULL;
-	// 		}
-	// 		if (copy._inventory[i] != NULL)
-	// 			_inventory[i] = copy._inventory[i]->clone();
-	// 	}
-	// }
 }
 
 Character &Character::operator=(const Character &other)
