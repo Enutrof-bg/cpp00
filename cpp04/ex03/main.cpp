@@ -25,7 +25,7 @@ void test_sujet()
 	me->equip(tmp);
 	tmp = src->createMateria("cure");
 	me->equip(tmp);
-	
+
 	ICharacter* bob = new Character("bob");
 	me->use(0, *bob);
 	me->use(1, *bob);
@@ -35,23 +35,16 @@ void test_sujet()
 	delete src;
 }
 
-int main()
+void test_1()
 {
-// 	std::cout << "test" << std::endl;
-
-	test_sujet();
-// 	// AMateria materia("materiel");
-// 	// std::cout << materia.getType() << std::endl;
-
-	
 	Character p1("Albert");
 
 	Cure heal1;
 	Cure* heal2 = heal1.clone();
 	Cure* heal3 = heal1.clone();
 
-// 	heal1.use(p1);
-// 	heal2->use(p1);
+	heal1.use(p1);
+	heal2->use(p1);
 
 	Ice shoot1;
 	Ice* shoot2 = shoot1.clone();
@@ -85,4 +78,42 @@ int main()
 
 	delete heal2;
 	delete shoot2;
+}
+
+void test_2()
+{
+	MateriaSource src;
+	src.learnMateria(new Ice());
+	src.learnMateria(new Cure());
+
+	MateriaSource dst = src;
+	(void)dst;
+	// delete src;
+
+	Character* me = new Character("me");
+	Character target("cible");
+
+	AMateria* tmp;
+	tmp = dst.createMateria("ice");
+	me->equip(tmp);
+	tmp = dst.createMateria("cure");
+	me->equip(tmp);
+
+	me->use(0, target);
+	me->use(1, target);
+
+
+	delete me;
+}
+
+int main()
+{
+	//std::cout << "Test" << std::endl;
+
+	// test_sujet();
+
+	// test_1();
+
+	test_2();
+
 }

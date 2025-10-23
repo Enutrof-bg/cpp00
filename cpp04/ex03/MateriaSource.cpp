@@ -59,7 +59,8 @@ MateriaSource &MateriaSource::operator=(const MateriaSource &other)
 	return *this;
 }
 
-	// ~IMateriaSource() {}
+// ~IMateriaSource() {}
+
 void MateriaSource::learnMateria(AMateria* m)
 {
 	for (int i = 0; i < 4; i++)
