@@ -14,7 +14,7 @@
 
 Character::Character()
 {
-	std::cout << "Character Default Constructor" << std::endl;
+	// std::cout << "Character Default Constructor" << std::endl;
 	_name = "Default";
 	for (int i = 0; i < 4; i++)
 	{
@@ -24,7 +24,7 @@ Character::Character()
 
 Character::Character(std::string name)
 {
-	std::cout << "Character Default Constructor" << std::endl;
+	// std::cout << "Character Default Constructor" << std::endl;
 	_name = name;
 	for (int i = 0; i < 4; i++)
 	{
@@ -34,7 +34,7 @@ Character::Character(std::string name)
 
 Character::Character(const Character &copy)
 {
-	std::cout << "Character Copy constructor" << std::endl;
+	// std::cout << "Character Copy constructor" << std::endl;
 	for (int j = 0; j < 4; j++)
 	{
 		_inventory[j] = NULL;
@@ -44,7 +44,7 @@ Character::Character(const Character &copy)
 
 Character &Character::operator=(const Character &other)
 {
-	std::cout << "Character Copy assignment operator" << std::endl;
+	// std::cout << "Character Copy assignment operator" << std::endl;
 	if (this != &other)
 	{
 		this->_name = other._name;
@@ -65,7 +65,7 @@ Character &Character::operator=(const Character &other)
 
 Character::~Character()
 {
-	std::cout << "Character Default Destructor" << std::endl;
+	// std::cout << "Character Default Destructor" << std::endl;
 	for (int i = 0; i < 4; i++)
 	{
 		if (_inventory[i] != NULL)
@@ -110,6 +110,10 @@ void Character::unequip(int idx)
 		_inventory[idx] = NULL;
 		std::cout << "Materia unequiped at slot " << idx << std::endl;
 	}
+	else if (idx >= 0 && idx < 4 && _inventory[idx] == NULL)
+		std::cout << "Empty slot at index : " << idx << std::endl;
+	else if (idx < 0 || idx >=4 )
+		std::cout << "Wrong index : " << idx << std::endl;
 }
 
 void Character::use(int idx, ICharacter& target)
@@ -122,5 +126,5 @@ void Character::use(int idx, ICharacter& target)
 			std::cout << "* Empty slot *" << std::endl;
 	}
 	else
-		std::cout << "Wrong index" << std::endl;
+		std::cout << "Invalid index :"<< idx << std::endl;
 }

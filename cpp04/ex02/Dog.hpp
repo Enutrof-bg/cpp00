@@ -29,4 +29,7 @@ public:
 	~Dog();
 
 	void makeSound() const;
+
+	Brain* getBrain();
+	const Brain* getBrain() const;
 };

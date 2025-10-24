@@ -14,7 +14,7 @@
 
 MateriaSource::MateriaSource()
 {
-	std::cout << "Materia Default Constructor" << std::endl;
+	// std::cout << "Materia Default Constructor" << std::endl;
 	for (int i = 0; i < 4; i++)
 	{
 		_spellBook[i] = NULL;
@@ -23,7 +23,7 @@ MateriaSource::MateriaSource()
 
 MateriaSource::~MateriaSource()
 {
-	std::cout << "Materia Default Destructor" << std::endl;
+	// std::cout << "Materia Default Destructor" << std::endl;
 	for (int i = 0; i < 4; i++)
 	{
 		if (_spellBook[i] != NULL)
@@ -35,7 +35,7 @@ MateriaSource::~MateriaSource()
 
 MateriaSource::MateriaSource(const MateriaSource &copy)
 {
-	std::cout << "Materia Copy constructor" << std::endl;
+	// std::cout << "Materia Copy constructor" << std::endl;
 	for (int j = 0; j < 4; j++)
 	{
 		_spellBook[j] = NULL;
@@ -45,7 +45,7 @@ MateriaSource::MateriaSource(const MateriaSource &copy)
 
 MateriaSource &MateriaSource::operator=(const MateriaSource &other)
 {
-	std::cout << "Materia Copy assignment operator" << std::endl;
+	// std::cout << "Materia Copy assignment operator" << std::endl;
 	for (int i = 0; i < 4; i++)
 	{
 		if (_spellBook[i] != NULL)

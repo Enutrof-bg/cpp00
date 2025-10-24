@@ -14,25 +14,25 @@
 
 AMateria::AMateria()
 {
-	std::cout << "Materia Default Constructor" << std::endl;
+	// std::cout << "Materia Default Constructor" << std::endl;
 	this->type = "Default";
 }
 
 AMateria::AMateria(std::string const & type)
 {
-	std::cout << "Materia Default Constructor" << std::endl;
+	// std::cout << "Materia Default Constructor" << std::endl;
 	this->type = type;
 }
 
 AMateria::AMateria(const AMateria &copy)
 {
-	std::cout << "Materia Copy constructor" << std::endl;
+	// std::cout << "Materia Copy constructor" << std::endl;
 	*this = copy;
 }
 
 AMateria &AMateria::operator=(AMateria const &other)
 {
-	std::cout << "Materia Copy assignment operator" << std::endl;
+	// std::cout << "Materia Copy assignment operator" << std::endl;
 	if (this != &other)
 	{
 		this->type = other.getType();
@@ -42,7 +42,7 @@ AMateria &AMateria::operator=(AMateria const &other)
 
 AMateria::~AMateria()
 {
-	std::cout << "Materia Default Destructor" << std::endl;
+	// std::cout << "Materia Default Destructor" << std::endl;
 }
 
 std::string const &AMateria::getType() const

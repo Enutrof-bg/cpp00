@@ -14,19 +14,19 @@
 
 Animal::Animal()
 {
-	std::cout << "Animal Default Constructor" << std::endl;
+	// std::cout << "Animal Default Constructor" << std::endl;
 	this->type = "Default";
 }
 
 Animal::Animal(const Animal &copy)
 {
-	std::cout << "Animal Copy constructor" << std::endl;
+	// std::cout << "Animal Copy constructor" << std::endl;
 	*this = copy;
 }
 
 Animal &Animal::operator=(const Animal &other)
 {
-	std::cout << "Animal Copy assignment operator" << std::endl;
+	// std::cout << "Animal Copy assignment operator" << std::endl;
 	if (this != &other)
 	{
 		this->type = other.type;
@@ -36,7 +36,7 @@ Animal &Animal::operator=(const Animal &other)
 
 Animal::~Animal()
 {
-	std::cout << "Animal Destructor" << std::endl;
+	// std::cout << "Animal Destructor" << std::endl;
 }
 
 std::string Animal::getType() const

@@ -30,4 +30,6 @@ public:
 
 	void makeSound() const;
 
+	Brain* getBrain();
+	const Brain* getBrain() const;
 };

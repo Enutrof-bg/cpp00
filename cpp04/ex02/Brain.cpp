@@ -14,18 +14,18 @@
 
 Brain::Brain()
 {
-	std::cout << "Brain Default Constructor" << std::endl;
+	// std::cout << "Brain Default Constructor" << std::endl;
 }
 
 Brain::Brain(const Brain &copy)
 {
-	std::cout << "Brain Copy constructor" << std::endl;
+	// std::cout << "Brain Copy constructor" << std::endl;
 	*this = copy;
 }
 
 Brain &Brain::operator=(const Brain &other)
 {
-	std::cout << "Brain Copy assignment operator" << std::endl;
+	// std::cout << "Brain Copy assignment operator" << std::endl;
 	if (this != &other)
 	{
 		for(int i = 0; i < 100; i++)
@@ -36,5 +36,18 @@ Brain &Brain::operator=(const Brain &other)
 
 Brain::~Brain()
 {
-	std::cout << "Brain Destructor" << std::endl;
+	// std::cout << "Brain Destructor" << std::endl;
+}
+
+std::string	Brain::getIdeas(int index)
+{
+	if (index >=0 && index < 100)
+		return (ideas[index]);
+	return ("Wrong index");
+}
+
+void Brain::setIdeas(std::string newIdea, int index)
+{
+	if (index >=0 && index < 100)
+		ideas[index] = newIdea;
 }

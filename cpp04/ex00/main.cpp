@@ -16,43 +16,37 @@
 #include "WrongAnimal.hpp"
 #include "WrongCat.hpp"
 
-void test_polymorphism()
+void test_sujet()
 {
-	std::cout << "\n=== TEST: Polymorphisme Animal ===" << std::endl;
-	const Animal* animal = new Animal();
-	const Animal* dog = new Dog();
-	const Animal* cat = new Cat();
-	
-	std::cout << "Type dog: " << dog->getType() << std::endl;
-	std::cout << "Type cat: " << cat->getType() << std::endl;
-	
-	animal->makeSound();
-	dog->makeSound();
-	cat->makeSound();
-	
-	delete animal;
-	delete dog;
-	delete cat;
+	const Animal* meta = new Animal();
+	const Animal* j = new Dog();
+	const Animal* i = new Cat();
+	std::cout << j->getType() << " " << std::endl;
+	std::cout << i->getType() << " " << std::endl;
+	i->makeSound(); //will output the cat sound!
+	j->makeSound();
+	meta->makeSound();
+	delete meta;
+	delete j;
+	delete i;
 }
 
-void test_wrong_polymorphism()
+void test_wrong()
 {
-	std::cout << "\n=== TEST: WrongAnimal (pas de virtual) ===" << std::endl;
 	const WrongAnimal* wrongAnimal = new WrongAnimal();
 	const WrongAnimal* wrongCat = new WrongCat();
 	
 	std::cout << "Type: " << wrongCat->getType() << std::endl;
 	
-	wrongAnimal->makeSound();  // Devrait dire "je suis un animal"
-	wrongCat->makeSound();     // ❌ Devrait dire "Meowww" mais dira "je suis un animal"
+	wrongAnimal->makeSound();
+	wrongCat->makeSound();
 	
 	delete wrongAnimal;
 	delete wrongCat;
 }
 
-void test_copy_constructor()
+void test_copy()
 {
-	std::cout << "\n=== TEST: Copy constructor ===" << std::endl;
 	Dog dog1;
 	Dog dog2(dog1);
 	
@@ -67,7 +61,6 @@ void test_copy_constructor()
 
 void test_assignment()
 {
-	std::cout << "\n=== TEST: Assignment operator ===" << std::endl;
 	Dog dog1;
 	Dog dog2;
 	dog2 = dog1;
@@ -78,65 +71,47 @@ void test_assignment()
 	
 	dog1.makeSound();
 	dog2.makeSound();
+	cat1.makeSound();
+	cat2.makeSound();
 }
 
 void test_destructors()
 {
-	std::cout << "\n=== TEST: Destructeurs virtuels ===" << std::endl;
 	{
 		Animal* ptr = new Dog();
-		delete ptr;  // ✓ Devrait appeler Dog::~Dog() puis Animal::~Animal()
+		ptr->makeSound();
+		delete ptr;
 	}
 	std::cout << std::endl;
 	{
 		Animal* ptr = new Cat();
-		delete ptr;  // ✓ Devrait appeler Cat::~Cat() puis Animal::~Animal()
+		ptr->makeSound();
+		delete ptr;
 	}
 }
+
 int main()
 {
+	std::cout << "TEST 1"<< std::endl;
 	Animal animal;
 	Cat cat;
 	Dog dog;
 	cat.makeSound();
 	dog.makeSound();
 
-	std::cout << std::endl;
+	std::cout << "\nTEST 2"<< std::endl;
+	test_sujet();
 
-	const Animal* meta = new Animal();
-	const Animal* j = new Dog();
-	const Animal* i = new Cat();
-	std::cout << j->getType() << " " << std::endl;
-	std::cout << i->getType() << " " << std::endl;
-	i->makeSound(); //will output the cat sound!
-	j->makeSound();
-	meta->makeSound();
-	delete meta;
-	delete j;
-	delete i;
+	std::cout << "\nTEST 3"<< std::endl;
 
-	std::cout << std::endl;
+	test_wrong();
+	std::cout << "\nTEST 4"<< std::endl;
 
-	const WrongAnimal* wrongmeta = new WrongAnimal();
-	const WrongAnimal* wc = new WrongCat();
-	std::cout << wrongmeta->getType() << " " << std::endl;
-	std::cout << wc->getType() << " " << std::endl;
-	wc->makeSound();
-	wrongmeta->makeSound();
-	delete wrongmeta;
-	delete wc;
+	test_copy();
+	std::cout << "\nTEST 5"<< std::endl;
 
-	std::cout << std::endl;
+	test_assignment();
+	std::cout << "\nTEST 6"<< std::endl;
 
-	Animal *a;
-	Dog d;
-	a = &d;
-	a->makeSound();
-
-	std::cout << std::endl;
-
-	Animal *test = new Dog;
-	test->makeSound();
-	delete test;
-
+	test_destructors();
 }
